@@ -79,7 +79,7 @@ check_puerto() {
 }
 
 check_http() {
-  curl -s -o /dev/null -w "%{http_code} %{time_total}" http://localhost
+  /usr/bin/curl -s -o /dev/null -w "%{http_code} %{time_total}" http://localhost
 }
 
 check_cpu() {
@@ -203,3 +203,4 @@ if [[ "$1" == "auto" ]]; then
 else
   menu_manual
 fi
+
