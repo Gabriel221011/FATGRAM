@@ -1,0 +1,3 @@
+fecha,host,ip,servicio,estado_servicio,puerto,http_code,http_time,cpu_load,ram_pct,disco_pct,resultado,descripcion
+2025-12-22T12:02:37+0100,debian13,10.0.22.15,apache2,0,80,,,0,46,18,OK,"OK: Todo correcto"
+2025-12-22T12:02:37+0100,debian13,10.0.22.15,nginx,3,80,,,0,46,18,CRIT,"CRIT: Servicio detenido"
