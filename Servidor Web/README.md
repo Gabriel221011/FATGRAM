@@ -1,5 +1,3 @@
 # Servidor web
-Aquí se encuentran los archivos que componen el servidor web creado con **nginx**.
-- img almacena las imágenes para el servidor (temporalmente)
-- index.html (es un ejemplo del diseño de la página web)
-- fatgram_nginx es el archivo de configuración del sitio de **nginx** para que funcione correctamente
+En este directorio, se encuentra la configuración de **Nginx** y el tema de **Fatgram** que compone la estructura del sitio.
+- En la configuración de Nginx, se encuentra toda la configuración del sitio como la configuración del proxy.
