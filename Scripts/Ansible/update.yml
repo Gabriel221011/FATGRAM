@@ -1,0 +1,14 @@
+---
+- name: Playbook para instalar servicios web
+hosts: aws
+become: yes 
+
+tasks: 
+  - name: actualizar los repositorios
+  command: apt update -y
+
+  - name: instalar apache2
+  apt:
+    name: apache2
+    state: present
+    
