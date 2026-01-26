@@ -1,7 +1,7 @@
 resource "aws_instance" "proxy" {
-  ami           = "ami-0ecb62995f68bb549"
-  key_name      = "vockey"
-  instance_type = "t3.small"
+  ami           = var.ubuntu_ami
+  key_name      = var.key_name
+  instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.gs_proxy_nat.id]
   subnet_id = aws_subnet.subnet_publica.id
   
@@ -13,9 +13,9 @@ resource "aws_instance" "proxy" {
 }
 
 resource "aws_instance" "ServerWeb" {
-  ami           = "ami-0ecb62995f68bb549"
-  key_name      = "vockey"
-  instance_type = "t3.small"
+  ami           = var.ubuntu_ami
+  key_name      = var.key_name
+  instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.gs_private.id]
   subnet_id = aws_subnet.subnet_privada.id
   

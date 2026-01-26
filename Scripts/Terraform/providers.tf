@@ -8,6 +8,6 @@ terraform {
 }
 
 provider "aws" {
-    region = "us-east-1"
-    profile = "laboratorio-151777"
+    region = var.aws_region
+    profile = var.aws_profile
 }

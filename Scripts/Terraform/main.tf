@@ -19,7 +19,7 @@ resource "aws_internet_gateway" "igw" {
 resource "aws_subnet" "subnet_publica" {
   vpc_id            = aws_vpc.vpc_proyecto.id
   cidr_block        = "10.0.0.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = var.aws_availability_zone
 
   tags = {
     Name = "proyecto-intermodular-subnet-public"
@@ -29,7 +29,7 @@ resource "aws_subnet" "subnet_publica" {
 resource "aws_subnet" "subnet_privada" {
   vpc_id            = aws_vpc.vpc_proyecto.id
   cidr_block        = "10.0.128.0/24"
-  availability_zone = "us-east-1a"
+  availability_zone = var.aws_availability_zone
 
   tags = {
     Name = "proyecto-intermodular-subnet-private"
@@ -39,7 +39,7 @@ resource "aws_subnet" "subnet_privada" {
 resource "aws_subnet" "subnet_rds" {
   vpc_id            = aws_vpc.vpc_proyecto.id
   cidr_block        = "10.0.30.0/24"
-  availability_zone = "us-east-1b"
+  availability_zone = var.aws_availability_zone_rds
 
   tags = {
     Name = "proyecto-intermodular-subnet-rds"
@@ -167,6 +167,29 @@ resource "aws_security_group" "gs_private" {
   }
   tags = {
     Name = "Grupo-Privado"
+  }
+}
+resource "aws_security_group" "gs_rds" {
+  name        = "gs-rds"
+  description = "Grupo de seguridad para la base de datos RDS"
+  vpc_id      = aws_vpc.vpc_proyecto.id
+
+  ingress {
+    description = "MariaDB"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    cidr_blocks = ["10.0.128.0/24"]
+  }
+  egress {
+    description = "All outbound"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    Name = "Grupo-RDS"
   }
 }
 # Creación de IP elástica
