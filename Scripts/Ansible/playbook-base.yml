@@ -1,0 +1,49 @@
+---
+- name: Configuración inicial de servidor (Nginx, PHP, MariaDB, Git)
+  hosts: servidores_web
+  become: yes
+  vars:
+  
+    php_packages:
+      - php-fpm
+      - php-mysql
+      - php-cli
+      - php-common
+      - php-curl
+      - php-mbstring
+      - php-xml
+
+  tasks:
+    - name: Actualizar el índice de repositorios (apt update)
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name: Instalar Git y Nginx
+      apt:
+        name:
+          - git
+          - nginx
+        state: present
+
+    - name: Instalar MariaDB Server
+      apt:
+        name: mariadb-server
+        state: present
+
+    - name: Instalar paquetes de PHP
+      apt:
+        name: "{{ php_packages }}"
+        state: present
+
+    - name: Asegurar que Nginx esté iniciado y habilitado
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Asegurar que MariaDB esté iniciado y habilitado
+      service:
+        name: mariadb
+        state: started
+        enabled: yes

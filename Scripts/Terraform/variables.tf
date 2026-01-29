@@ -22,7 +22,11 @@ variable "instance_type" {
   description = "Tipo de instancia EC2"
   type        = string
 }
-variable "key_name" {
-  description = "Nombre del par de claves para las instancias EC2"
+variable "key_type" {
+  description = "Tipo del par de claves para las instancias EC2"
+  type        = string
+}
+variable "nacl_id" {
+  description = "ID de la ACL de red para la instancia NAT"
   type        = string
 }

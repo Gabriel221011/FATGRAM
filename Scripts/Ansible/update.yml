@@ -1,7 +1,0 @@
----
-- name: Playbook para actualizar repositorios en servidores AWS
-  hosts: aws
-  become: yes
-  tasks:
-    - name: Actualizar los repositorios
-      command: apt update

@@ -1,4 +1,3 @@
-# Este es el archivo main.tf provisional que integra los recursos necesarios para la infraestructura del proyecto.
 # Creación de la VPC
 resource "aws_vpc" "vpc_proyecto" {
   cidr_block = "10.0.0.0/16"
@@ -199,15 +198,4 @@ resource "aws_eip" "proxy_eip" {
   tags = {
     Name = "proxy-eip"
   }
-}
-# ACL para la instancia NAT
-resource "aws_network_acl_rule" "inbound_110" {
-  network_acl_id = var.nacl_id
-  rule_number    = 110 
-  egress         = false
-  protocol       = "-1" # Todo el tráfico [cite: 141]
-  rule_action    = "allow"
-  cidr_block     = "10.0.128.0/24" # Subred Privada [cite: 147, 148]
-  from_port      = 0
-  to_port        = 0
 }
