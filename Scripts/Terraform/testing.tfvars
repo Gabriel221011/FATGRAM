@@ -1,0 +1,7 @@
+aws_profile = "laboratorio-151777"
+aws_region = "us-east-1"
+aws_availability_zone = "us-east-1a"
+aws_availability_zone_rds = "us-east-1b"
+ubuntu_ami = "ami-0ecb62995f68bb549"
+instance_type = "t3.small"
+key_name = "vockey"
