@@ -38,13 +38,15 @@ Esta es la configuración de nuestra VPC de AWS
 ### Configuración de la subredes
 Esta tabla muestra la configuración de las subredes de nuestra VPC
 
-| Subredes | CIDR | Zona de disponibilidad y región |
-|:--------:|:----:|:-------------------------------:|
-| proyecto-intermodular-subnet-public1-us-east-1a | 10.0.0.0/24 | us-east1a |
-| proyecto-intermodular-subnet-private1-us-east-1a | 10.0.128.0/24 | us-east1a |
-| subred-rds | 10.0.30.0/24 | us-east1b |
+| Subredes | CIDR | Zona de disponibilidad y región | Región |
+|:--------:|:----:|:-------------------------------:|:------:|
+| proyecto-intermodular-subnet-public1-us-east-1a | 10.0.0.0/24 | us-east-1 | us-east-1a |
+| proyecto-intermodular-subnet-private1-us-east-1a | 10.0.128.0/24 | us-east-1 | us-east-1a |
+| subred-rds | 10.0.30.0/24 | us-east-1 | us-east-1b |
 
-**La subred del RDS forma parte de un grupo de subredes necesario para la creación de la base de datos, ya que requiere que se use otra región "de soporte"**
+**La subred del RDS forma parte de un grupo de subredes necesario para la creación de la base de datos, ya que requiere que se use otra región de soporte**
+
+![Tabla de subredes](Imagenes/vpc_subredes.png)
 
 ### Configuración de las tablas de enrutamiento
 Estas imágenes muestran las tablas de enrutamiento de las subredes
@@ -59,10 +61,10 @@ Esta tabla muestra las instancias que usamos en AWS
 
 | VPC | Instancia | Dirección IP | Subredes | Claves | Descripción | 
 |:---:|:---------:|:------------:|:--------:|:------:|:-----------:|
-| proyecto-intermodular | Proxy-NAT| 54.211.153.135 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Servidor Proxy encargado de recibir y redirigir el tráfico a los servidores web, que será accesible para todos|
-| proyecto-intermodular | Servidor Web | No recibe IP pública | proyecto-intermodular-subnet-private1-us-east-1a | vockey | Servidor web que almacena Wordpress |
-| proyecto-intermodular | Servidor Web 2 | No recibe IP pública | proyecto-intermodular-subnet-private1-us-east-1a | vockey | Servidor de balanceo de carga para el servidor web |
-| proyecto-intermodular | Monitorización | 34.233.2.104 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Instancia utilizada que actúa como máquina local para monitorizar los servicios del proxy y el servidor web |
+| proyecto-intermodular-vpc | Proxy-NAT| 54.211.153.135 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Servidor Proxy encargado de recibir y redirigir el tráfico a los servidores web, que será accesible para todos|
+| proyecto-intermodular-vpc | Servidor Web | No recibe IP pública | proyecto-intermodular-subnet-private1-us-east-1a | vockey | Servidor web que almacena Wordpress |
+| proyecto-intermodular-vpc | Servidor Web 2 | No recibe IP pública | proyecto-intermodular-subnet-private1-us-east-1a | vockey | Servidor de balanceo de carga para el servidor web |
+| proyecto-intermodular-vpc | Monitorización | 34.233.2.104 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Instancia utilizada que actúa como máquina local para monitorizar los servicios del proxy y el servidor web |
 
 ![Lista de instancias](Imagenes/instancias.png)
 
@@ -77,7 +79,7 @@ Estos son los grupos de seguridad de las instancias y de la base de datos
 
 ![Grupos de seguridad](Imagenes/security_groups.png)
 ### Configuración de la base de datos RDS
-Esta es la configuración de la base de datos.
+Esta es la configuración de la base de datos para almacenar los datos de nuestro sitio.
 
 ![Información general de la base de datos](Imagenes/rds_info.png)
 
