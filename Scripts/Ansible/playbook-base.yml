@@ -2,17 +2,6 @@
 - name: Configuración inicial de servidor (Nginx, PHP, MariaDB, Git)
   hosts: servidores_web
   become: yes
-  vars:
-  
-    php_packages:
-      - php-fpm
-      - php-mysql
-      - php-cli
-      - php-common
-      - php-curl
-      - php-mbstring
-      - php-xml
-
   tasks:
     - name: Actualizar el índice de repositorios (apt update)
       apt:
@@ -24,26 +13,31 @@
         name:
           - git
           - nginx
+          - php
+          - mariadb-server
         state: present
-
-    - name: Instalar MariaDB Server
-      apt:
-        name: mariadb-server
-        state: present
-
-    - name: Instalar paquetes de PHP
-      apt:
-        name: "{{ php_packages }}"
-        state: present
-
-    - name: Asegurar que Nginx esté iniciado y habilitado
+    - name: Configurar git para el usuario actual # Configuración de git del administrador del Github
+      git_config:
+        name: user.email
+        value: "pablosainzdelamaza@gmail.com"
+        scope: global
+    - name: Clonar el respositorio de Fatgram
+      git:
+        repo: 'https://github.com/Gabriel221011/FATGRAM.git'
+        dest: /home/ubuntu/FATGRAM
+        version: main
+    - name: Copiar el archivo de configuración de Nginx para Fatgram
+      copy:
+        src: /home/ubuntu/FATGRAM/Servidor\ Web/Configuracion \ de\ Nginx/
+        dest: /etc/nginx/
+        owner: root
+        group: root
+        mode: '0644'
+      notify:
+          - Reiniciar Nginx
+    
+  handlers:
+    - name: Reiniciar Nginx
       service:
         name: nginx
-        state: started
-        enabled: yes
-
-    - name: Asegurar que MariaDB esté iniciado y habilitado
-      service:
-        name: mariadb
-        state: started
-        enabled: yes
+        state: restarted

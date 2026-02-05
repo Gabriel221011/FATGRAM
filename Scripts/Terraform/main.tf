@@ -200,14 +200,22 @@ resource "aws_eip" "proxy_eip" {
     Name = "proxy-eip"
   }
 }
+# Creación de la ACL de red
+resource "aws_network_acl" "acl_nat" {
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "ACL-Instancia-NAT"
+  }
+}
 # ACL para la instancia NAT
 resource "aws_network_acl_rule" "inbound_110" {
-  network_acl_id = var.nacl_id
+  network_acl_id = aws_network_acl.acl_nat.id
   rule_number    = 110 
   egress         = false
-  protocol       = "-1" # Todo el tráfico [cite: 141]
+  protocol       = "-1"
   rule_action    = "allow"
-  cidr_block     = "10.0.128.0/24" # Subred Privada [cite: 147, 148]
+  cidr_block     = "10.0.128.0/24" 
   from_port      = 0
   to_port        = 0
 }
