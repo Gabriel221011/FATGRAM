@@ -61,10 +61,10 @@ Esta tabla muestra las instancias que usamos en AWS
 
 | VPC | Instancia | Dirección IP | Subredes | Claves | Descripción | 
 |:---:|:---------:|:------------:|:--------:|:------:|:-----------:|
-| proyecto-intermodular-vpc | Proxy-NAT| 54.211.153.135 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Servidor Proxy encargado de recibir y redirigir el tráfico a los servidores web, que será accesible para todos|
+| proyecto-intermodular-vpc | Proxy-NAT| 23.21.75.85 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Servidor Proxy encargado de recibir y redirigir el tráfico a los servidores web, que será accesible para todos|
 | proyecto-intermodular-vpc | Servidor Web | No recibe IP pública | proyecto-intermodular-subnet-private1-us-east-1a | vockey | Servidor web que almacena Wordpress |
 | proyecto-intermodular-vpc | Servidor Web 2 | No recibe IP pública | proyecto-intermodular-subnet-private1-us-east-1a | vockey | Servidor de balanceo de carga para el servidor web |
-| proyecto-intermodular-vpc | Monitorización | 34.233.2.104 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Instancia utilizada que actúa como máquina local para monitorizar los servicios del proxy y el servidor web |
+| proyecto-intermodular-vpc | Monitorización | 52.54.178.148 | proyecto-intermodular-subnet-public1-us-east-1a | vockey | Instancia utilizada que actúa como máquina local para monitorizar los servicios del proxy y el servidor web |
 
 ![Lista de instancias](Imagenes/instancias.png)
 

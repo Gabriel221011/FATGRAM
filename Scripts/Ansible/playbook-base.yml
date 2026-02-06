@@ -1,13 +1,12 @@
 ---
 - name: Configuración inicial de servidor (Nginx, PHP, MariaDB, Git)
-  hosts: servidores_web
+  hosts: aws
   become: yes
   tasks:
     - name: Actualizar el índice de repositorios (apt update)
       apt:
         update_cache: yes
-        cache_valid_time: 3600
-
+        
     - name: Instalar Git y Nginx
       apt:
         name:
