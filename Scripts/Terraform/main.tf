@@ -202,7 +202,7 @@ resource "aws_eip" "proxy_eip" {
 }
 # Creación de la ACL de red
 resource "aws_network_acl" "acl_nat" {
-  vpc_id = aws_vpc.main.id
+  vpc_id = aws_vpc.vpc_proyecto.id
 
   tags = {
     Name = "ACL-Instancia-NAT"
