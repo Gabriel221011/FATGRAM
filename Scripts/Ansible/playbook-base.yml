@@ -27,7 +27,7 @@
         version: main
     - name: Copiar el archivo de configuración de Nginx para Fatgram
       copy:
-        src: /home/ubuntu/FATGRAM/Servidor\ Web/Configuracion \ de\ Nginx/
+        src: /home/ubuntu/FATGRAM/Servidor Web/Configuracion de Nginx/
         dest: /etc/nginx/
         owner: root
         group: root
