@@ -18,6 +18,22 @@
           - monitorizacion
         append: yes
 
+    - name: Crear carpeta de ssh para el usuario "monitorizacion"
+      file:
+        path: /home/monitorizacion/.ssh
+        state: directory
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0700'
+
+    - name: Mover la clave al nuevo usuario
+      move:
+        src: /home/ubuntu/.ssh/fatgram.pem
+        dest: /home/monitorizacion/.ssh/fatgram.pem
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0400'
+
 - name: Preparación de los servidores y el proxy para la monitorización
   hosts: monitorizacion
   become: yes
@@ -36,21 +52,8 @@
           - python3-pip
         state: present
 
-    - name: Crear carpeta de ssh para el usuario "monitorizacion"
-      file:
-        path: /home/monitorizacion/.ssh
-        state: directory
-        owner: monitorizacion
-        group: monitorizacion
-        mode: '0700'
-
     - name: Copiar la clave a la carpeta de los usuarios de los servidores
-      copy:
-        src: /home/monitorizacion/.ssh/fatgram.pem
-        dest: /home/monitorizacion/.ssh/fatgram.pem
-        owner: monitorizacion
-        group: monitorizacion
-        mode: '0400'
+      command: scp -i /home/monitorizacion/.ssh/fatgram.pem /home/monitorizacion/.ssh/fatgram.pem ubuntu@{{ inventory_hostname }}:/home/ubuntu/.ssh/
 
     - name: Crear carpeta para almacenar scripts de monitorización
       file:
@@ -101,8 +104,8 @@
         group: monitorizacion
         mode: '0755'
 
-    - name: Ejecutar el script de Ansible para configurar los servidores y el proxy
-      command: ansible-playbook /home/monitorizacion/scripts/ansible/playbook-servidores.yml
+    - name: Ejecutar el script de Ansible para configurar el proxy
+      command: ansible-playbook /home/monitorizacion/scripts/ansible/playbook-proxy.yml
       become: yes
       become_user: monitorizacion
       

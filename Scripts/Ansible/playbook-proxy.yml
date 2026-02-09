@@ -1,0 +1,80 @@
+---
+- name: Configuración de la instancia Proxy
+  hosts: proxy
+  become: yes
+  tasks:
+    - name: Actualizar el índice de repositorios (apt update)
+      apt:
+        update_cache: yes
+        
+    - name: Instalar los paquetes necesarios para configurar el proxy
+      apt:
+        name:
+          - git
+          - nginx
+          - php
+          - ansible
+          - iptables-persistent
+          - python3
+          - python3-pip
+        state: present
+
+  ## Configuración de la instancia NAT
+
+    - name: IPForwarding
+      sysctl:
+        name: net.ipv4.ip_forward
+        value: '1'
+        sysctl_set: yes
+        state: present
+        reload: yes
+ 
+    - name: Crear directorio
+      file:
+        path: /etc/iptables
+        state: directory
+        mode: '0755'
+ 
+    - name: Configurar iptables
+      shell: 
+        sudo iptables -t nat -A POSTROUTING -o ens5 -j MASQUERADE
+ 
+    - name: "Guardar reglas de iptables para que se apliquen al reiniciar"
+      shell: 
+        iptables-save > /etc/iptables/rules.v4
+
+    - name: Habilitar el reenvío IPv4 al iniciar la instancia
+      command: echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf  
+
+    ## Configuración del proxy inverso con Nginx
+
+    - name: Clonar el respositorio de Fatgram
+      git:
+        repo: 'https://github.com/Gabriel221011/FATGRAM.git'
+        dest: /home/ubuntu/FATGRAM
+        version: main
+
+    - name: Copiar el archivo de configuración de Nginx para Fatgram
+      copy:
+        src: /home/ubuntu/FATGRAM/Servidor Web/Proxy/
+        dest: /etc/nginx/
+        owner: root
+        group: root
+        mode: '0644'
+      notify:
+          - Reiniciar Nginx
+
+    - name: Ejecutar el script de configuración de los servidores web
+      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Ansible/playbook-servidores.yml
+
+    - name: Borrar el repositorio clonado para liberar espacio
+      file:
+        src: /home/ubuntu/FATGRAM
+        state: absent
+
+    ## Handlers para reiniciar el servicio de Nginx cuando se cambie su configuración
+  handlers:
+    - name: Reiniciar Nginx
+      service:
+        name: nginx
+        state: restarted

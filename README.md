@@ -6,23 +6,19 @@ Este es el proyecto intermodular sobre una red social de comida que permite a lo
   - **[Servidor Web/](/Servidor%20Web/)**
     - Configuración de Nginx/
     - fatgram-theme/
-    - style.css
+    - Wordpress/
+    - phpMyAdmin/
     - README.md
   - **[Logs/](/Logs)**
-    - monitor.csv
-    - README.md
   - **[Scripts/](/Scripts/)**
     - Ansible/
     - Terraform/
     - Monitorización/
     - README.md
   - **[Documentos/](/Documentos)**
-    - [CONSULTAS MARIADB SOBRE WORDPRESS FATGRAM.pdf](Documentos/Configuracion%20de%20la%20instancia%20NAT.pdf)
-    - [Configuracion de la instancia NAT.pdf](Documentos/Configuracion%20de%20la%20instancia%20NAT.pdf)
-    - [Plan De Transformación Digital – Fatgram.pdf](Documentos/Plan%20De%20Transformación%20Digital%20–%20Fatgram.pdf)
+    - Configuraciones/ 
   - **[Imágenes/](/Imagenes/)**
   - README.md
-
 
 ## Infraestructura de AWS
 En este apartado se muestra toda la infraestructura de nuestra nube de AWS para almacenar el proyecto
