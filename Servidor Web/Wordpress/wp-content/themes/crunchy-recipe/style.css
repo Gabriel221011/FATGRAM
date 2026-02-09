@@ -1,0 +1,102 @@
+/*
+Theme Name:   Crunchy Recipe
+Theme URI:    https://wpdelicious.com/wordpress-themes/crunchy-recipe/
+Description:  Crunchy Recipe is a free recipe WordPress theme for creating a professional food and recipe website. This theme is compatible with the Delicious Recipes plugin, offering several features that make it simple to create and share your recipes with your readers. This mobile-friendly theme is SEO optimized to improve your recipe rankings on search engines. Crunchy Recipe is optimized for speed to load your site fast and rank better on search engines. This theme offers unlimited colors and 1400+ Google fonts to change your website's look and feel with a single click. With the pre-defined Instagram section, you can showcase your recipe images and grow your followers. It also includes newsletter integration to help you grow your email list and build strong relationships with readers. Crunchy Recipe is translation-ready, RTL-ready, and WooCommerce-compatible. Check the demo at https://wpdelicious.com/wordpress-themes/crunchy-recipe/, and get support at https://wpdelicious.com/support-ticket/
+Author:       WP Delicious
+Author URI:   https://wpdelicious.com/
+Template:     yummy-bites
+Version:      1.0.1
+Requires at least: 6.2
+Requires PHP: 7.3
+Tested up to: 6.6
+License:      GNU General Public License v3 or later
+License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+Tags:         blog, one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, custom-background, custom-header, custom-menu, custom-logo, featured-images, threaded-comments, full-width-template, rtl-language-support, translation-ready, theme-options, e-commerce
+Text Domain:  crunchy-recipe
+*/
+@media screen and (min-width: 1200px) {
+  .site-header.style-seven .search-form {
+    max-width: 192px;
+  }
+}
+.site-header.style-seven > .header-top {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .site-header.style-seven > .header-top {
+    display: block;
+    background-color: rgba(var(--yummy-secondary-color-rgb), 0.05);
+  }
+}
+.site-header.style-seven > .header-top .container {
+  justify-content: space-between;
+}
+@media screen and (min-width: 1200px) {
+  .site-header.style-seven > .header-top .container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+.site-header.style-seven > .header-main {
+  padding: 32px 0;
+}
+
+.site-banner.banner-slider.style-five .container {
+  max-width: 100%;
+  padding: 0;
+}
+.site-banner.banner-slider.style-five .item {
+  position: relative;
+  padding-bottom: 20px;
+}
+.site-banner.banner-slider.style-five .item .item-img {
+  position: relative;
+}
+.site-banner.banner-slider.style-five .item .item-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000000 100%);
+  width: 100%;
+  height: 100%;
+}
+.site-banner.banner-slider.style-five .item .recipe-item-meta span {
+  color: var(--yummy-white-color);
+}
+.site-banner.banner-slider.style-five .item .banner-caption {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: calc(100% - 41px);
+  width: 100%;
+  padding: 0;
+}
+.site-banner.banner-slider.style-five .item .banner-caption .item-title {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+}
+.site-banner.banner-slider.style-five .item .banner-caption .item-title a {
+  color: var(--yummy-white-color);
+}
+.site-banner.banner-slider.style-five .item .banner-caption .item-title a:hover {
+  color: var(--yummy-primary-color);
+}
+.site-banner.banner-slider.style-five .owl-carousel .owl-item {
+  overflow: hidden;
+}
+.site-banner.banner-slider.style-five .owl-carousel .owl-nav button.owl-prev {
+  left: 30px;
+}
+.site-banner.banner-slider.style-five .owl-carousel .owl-nav button.owl-next {
+  right: 30px;
+}
+
+:is(.home, .blog, .archive, .search-results) .site-main article .entry-content {
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=style.css.map */

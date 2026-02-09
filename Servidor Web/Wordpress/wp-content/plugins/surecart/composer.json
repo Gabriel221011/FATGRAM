@@ -1,0 +1,111 @@
+{
+	"version": "0.16.2",
+	"name": "surecart/wp",
+	"type": "wordpress-plugin",
+	"keywords": [
+		"wordpress",
+		"plugin",
+		"starter plugin",
+		"wpemerge"
+	],
+	"license": "GPL-2.0-only",
+	"require": {
+		"php": ">=7.4",
+		"composer/installers": "^1.4",
+		"pimple/pimple": "^3.2",
+		"guzzlehttp/psr7": "^2.7.0",
+		"typisttech/imposter-plugin": "^0.6.2",
+		"surecart/wp-query-builder": "dev-master",
+		"woocommerce/action-scheduler": "^3.6"
+	},
+	"require-dev": {
+		"php": "^7.4|^8.0|^8.1",
+		"filp/whoops": "^2.2",
+		"htmlburger/wpemerge-cli": "~0.16.0",
+		"wp-phpunit/wp-phpunit": "^6",
+		"wp-cli/wp-cli-bundle": "*",
+		"mockery/mockery": "^1.4",
+		"symfony/debug": "~3.0",
+		"wp-coding-standards/wpcs": "^3.1.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+		"phpstan/phpstan": "^1.2",
+		"szepeviktor/phpstan-wordpress": "^1.0",
+		"yoast/phpunit-polyfills": "^1.0",
+		"phpcompatibility/php-compatibility": "^9.0",
+		"spatie/phpunit-watcher": "^1.23"
+	},
+	"repositories": [
+		{
+			"type": "package",
+			"package": {
+				"name": "surecart/wp-query-builder",
+				"version": "dev-master",
+				"source": {
+					"url": "https://github.com/surecart/wp-query-builder.git",
+					"type": "git",
+					"reference": "master"
+				}
+			}
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"SureCart\\": "app/src/",
+			"SureCartCore\\": "core/core/src/",
+			"SureCartAppCore\\": "core/app-core/src/",
+			"SureCartBlocks\\": "packages/blocks/"
+		},
+		"files": [
+			"core/core/config.php",
+			"core/app-core/config.php",
+			"vendor/woocommerce/action-scheduler/action-scheduler.php"
+		]
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"SureCart\\Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"analyse": "php -d memory_limit=4G vendor/bin/phpstan analyse",
+		"install-test-env": [
+			"wpemerge config:create"
+		],
+		"install-dev-env": [
+			"@php wpemerge config:create",
+			"@php wpemerge install:dependencies",
+			"@php wpemerge assets:build"
+		],
+		"post-create-project-cmd": "@install-dev-env"
+	},
+	"extra": {
+		"imposter": {
+			"namespace": "SureCartVendors\\",
+			"excludes": [
+				"woocommerce/action-scheduler"
+			]
+		},
+		"installer-paths": {
+			"vendor/woocommerce/action-scheduler": [
+				"woocommerce/action-scheduler"
+			]
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"classmap-authoritative": true,
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"composer/installers": true,
+			"typisttech/imposter-plugin": true
+		},
+		"audit": {
+			"ignore": [
+				"PKSA-wws7-mr54-jsny",
+				"PKSA-b8f7-zn44-r4gz",
+				"PKSA-s25b-vbmp-jvhh",
+				"PKSA-jn72-4kr8-gj3h"
+			]
+		}
+	}
+}

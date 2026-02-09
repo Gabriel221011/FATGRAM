@@ -1,0 +1,1544 @@
+# Translation of Themes - Foodica in Spanish (Spain)
+# This file is distributed under the same license as the Themes - Foodica package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-11-17 16:31:29+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: es\n"
+"Project-Id-Version: Themes - Foodica\n"
+
+#. Description of the theme
+#: style.css
+#, gp-priority: high
+msgid "Foodica is perfect for creating food based blogs and recipe websites. A beautiful featured slider and WooCommerce integration mean Foodica is packed with features to help you stand out. The new version 1.1 includes a beautiful Recipe Index template. The theme is fully GDPR-compliant and doesn't use any external Google Fonts. All fonts are locally hosted. For DEMO and more details about the PRO version look here: https://www.wpzoom.com/free-wordpress-themes/foodica-lite/"
+msgstr "Foodica es perfecto para crear blogs de comida y sitios web de recetas. Un hermoso carrusel destacado y la integración de WooCommerce significa Foodica está lleno de características para ayudarle a destacar. La nueva versión 1.1 incluye una bonita plantilla Recipe Index. El tema es totalmente compatible con GDPR y no utiliza ninguna fuente externa de Google Fonts. Todas las fuentes están alojadas localmente. Para DEMO y más detalles sobre la versión PRO mira aquí: https://www.wpzoom.com/free-wordpress-themes/foodica-lite/"
+
+#. Theme Name of the theme
+#: style.css inc/admin-notice.php:75
+#: inc/classes/class-foodica-notice-review.php:81
+#, gp-priority: high
+msgid "Foodica"
+msgstr "Foodica"
+
+#: inc/theme-info-page.php:570
+msgid "To ease up the journey you’re starting with Foodica, we’re sending you some useful tips & tricks to have the best experience building your website."
+msgstr "Para facilitar el viaje que estás iniciando con Foodica, te enviamos algunos útiles consejos y trucos para que tengas la mejor experiencia creando tu web."
+
+#: inc/theme-info-page.php:567
+msgid "Subscribe for Tips & Tricks"
+msgstr "Suscríbete para obtener consejos y trucos"
+
+#: inc/theme-info-page.php:553
+msgid "Support Forums"
+msgstr "Foros de soporte"
+
+#: inc/theme-info-page.php:551
+msgid "Documentation is the place where you’ll find the information needed to setup the theme quickly, and other details about theme-specific features. You can also get in touch with our team by contacting us through our website or using the Support Forum."
+msgstr "La documentación es el lugar donde encontrarás la información necesaria para configurar el tema rápidamente, y otros detalles sobre características específicas del tema. También puedes ponerte en contacto con nuestro equipo a través de nuestra página web o del foro de soporte."
+
+#: inc/theme-info-page.php:550
+msgid "Need help?"
+msgstr "¿Necesitas ayuda?"
+
+#: inc/theme-info-page.php:540
+msgid "Discover the PRO Version &rarr;"
+msgstr "Descubre la versión PRO &rarr;"
+
+#: inc/theme-info-page.php:535
+msgid "Upgrade to the PRO version to get instant access to Elementor integration and pre-built demos!"
+msgstr "¡Actualiza a la versión Premium para obtener acceso a la integración con Elementor y a las demos pre-construidas!"
+
+#: inc/theme-info-page.php:510
+msgid "Get Foodica PRO Today!"
+msgstr "¡Obtener Foodica PRO hoy mismo!"
+
+#: inc/theme-info-page.php:503
+msgid "Fast Email Support"
+msgstr "Soporte rápido por correo electrónico"
+
+#: inc/theme-info-page.php:478
+msgid "Header & Footer Layouts"
+msgstr "Diseños de cabecera y pie de página"
+
+#: inc/theme-info-page.php:472
+msgid "Post Layouts"
+msgstr "Diseños de las entradas"
+
+#: inc/theme-info-page.php:445
+msgid "Color Schemes"
+msgstr "Combinaciones de colores"
+
+#: inc/theme-info-page.php:440
+msgid "Starter Sites"
+msgstr "Sitios de inicio"
+
+#: inc/theme-info-page.php:435
+msgid "Live Customizer"
+msgstr "Personalizador en vivo"
+
+#: inc/theme-info-page.php:416
+msgid "Below is a comparison chart of the free and the premium versions."
+msgstr "A continuación se muestra una gráfica comparativa de las versiones gratuita y premium."
+
+#: inc/theme-info-page.php:405
+msgid "Get Foodica PRO Today &rarr;"
+msgstr "Obtener Foodica PRO &rarr;"
+
+#: inc/theme-info-page.php:402
+msgid "And many other premium features..."
+msgstr "Y otras muchas características premium..."
+
+#: inc/theme-info-page.php:393
+msgid "Upgrading to the Premium version, you will get access to Multiple Header & Footer Layouts."
+msgstr "Al actualizar a la versión Premium, tendrás acceso a varios diseños de cabecera y pie de página."
+
+#: inc/theme-info-page.php:390
+msgid "Multiple Header & Footer Layouts"
+msgstr "Varios diseños de cabecera y pie de página"
+
+#: inc/theme-info-page.php:384
+msgid "The PRO version includes additional block patterns to help you build unique page layouts. You can find different patterns to add sections like recipe categories, call-to-actions and more!"
+msgstr "La versión PRO incluye patrones de bloques adicionales para ayudarte a crear diseños de página únicos. Puedes encontrar diferentes patrones para añadir secciones como categorías de recetas, llamadas a la acción ¡y mucho más!"
+
+#: inc/theme-info-page.php:382
+msgid "Block Patterns for Food Blogs"
+msgstr "Patrones de bloques para blogs de comida"
+
+#: inc/theme-info-page.php:373
+msgid "Foodica PRO Demos &rarr;"
+msgstr "Demos de Foodica PRO &rarr;"
+
+#: inc/theme-info-page.php:372
+msgid "https://demo.wpzoom.com/foodica-demo/"
+msgstr "https://demo.wpzoom.com/foodica-demo/"
+
+#: inc/theme-info-page.php:369
+msgid "With the built-in page templates, you can quickly add useful pages to your website. The PRO version includes layouts crafted specifically for food recipe sites."
+msgstr "Con las plantillas de página incorporadas, puedes añadir rápidamente páginas útiles a tu sitio web. La versión PRO incluye diseños elaborados específicamente para sitios de recetas de comida."
+
+#: inc/theme-info-page.php:367
+msgid "Custom Page Templates"
+msgstr "Plantillas de páginas personalizadas"
+
+#: inc/theme-info-page.php:358
+msgid "No more custom CSS! The Premium version gives you access to numerous customization options, and you can change the theme's color and font styles of each element."
+msgstr "¡Se acabó el CSS personalizado! La versión Premium te da acceso a numerosas opciones de personalización, y puedes cambiar el color del tema y los estilos de fuente de cada elemento."
+
+#: inc/theme-info-page.php:356
+msgid "Customize Every Detail"
+msgstr "Personaliza cada detalle"
+
+#: inc/theme-info-page.php:327
+msgid "Using the Theme Options panel, you can configure different features and functionalities in the theme as you want. Additional customization options are available in the Customizer, while different options for features like Recipe Index can be found on the Theme Options page."
+msgstr "Utilizando el panel de opciones del tema, puedes configurar diferentes características y funcionalidades del tema como desees. Las opciones de personalización adicionales están disponibles en el Personalizador, mientras que las diferentes opciones para características como el porfolio se pueden encontrar en la página de opciones del tema."
+
+#: inc/theme-info-page.php:325
+msgid "Theme Options Panel"
+msgstr "Panel de opciones del tema"
+
+#: inc/theme-info-page.php:303
+msgid "The PRO version will unlock Premium Elementor features such as Slideshow widget, Elementor demo and more!"
+msgstr "La versión PRO desbloqueará las características Premium de Elementor, como el widget de pase de diapositivas, la demo de Elementor y ¡mucho más!"
+
+#: inc/theme-info-page.php:300 inc/theme-info-page.php:456
+msgid "Elementor Integration"
+msgstr "Integración con Elementor"
+
+#: inc/theme-info-page.php:276
+msgid "Need to sell something? With the Foodica PRO theme, you can build your shop and start selling anything easily! The theme is fully compatible with the WooCommerce plugin."
+msgstr "¿Necesitas vender algo? Con el tema Foodica PRO, ¡puedes crear tu tienda y empezar a vender cualquier cosa fácilmente! El tema es totalmente compatible con el plugin WooCommerce."
+
+#: inc/theme-info-page.php:273
+msgid "WooCommerce Support"
+msgstr "Compatibilidad con WooCommerce"
+
+#: inc/theme-info-page.php:267
+msgid "Premium Features"
+msgstr "Características premium"
+
+#: inc/theme-info-page.php:253
+msgid "How to Create a Recipe Card?"
+msgstr "¿Cómo crear una tarjeta de receta?"
+
+#: inc/theme-info-page.php:252
+msgid "https://recipecard.io/documentation/recipe-card-blocks-pro-how-to-use-the-recipe-card-blocks/"
+msgstr "https://recipecard.io/documentation/recipe-card-blocks-pro-how-to-use-the-recipe-card-blocks/"
+
+#: inc/theme-info-page.php:247
+msgid "Install Recipe Card Blocks &rarr;"
+msgstr "Instalar Recipe Card Blocks &rarr;"
+
+#: inc/theme-info-page.php:241
+msgid "Add a New Recipe &rarr;"
+msgstr "Añadir una nueva receta &rarr;"
+
+#: inc/theme-info-page.php:233
+msgid "Using the free version of our %1$sRecipe Card Blocks%2$s plugin, you can quickly add recipe cards in your blog posts theme!"
+msgstr "Utilizando la versión gratuita de nuestro plugin %1$sRecipe Card Blocks%2$s, ¡puedes añadir rápidamente tarjetas de recetas en tu tema de entradas de tu blog!"
+
+#: inc/theme-info-page.php:230
+msgid "Adding Recipe Cards"
+msgstr "Añadir tarjetas de recetas"
+
+#: inc/theme-info-page.php:217
+msgid "Typography Options &rarr;"
+msgstr "Opciones de tipografía &rarr;"
+
+#: inc/theme-info-page.php:212
+msgid "Customize Colors &rarr;"
+msgstr "Personalizar colores &rarr;"
+
+#: inc/theme-info-page.php:205
+msgid "Set up your global colors and fonts to match your site with your brand."
+msgstr "Configura tus colores y fuentes globales para que tu sitio se ajuste a tu marca."
+
+#: inc/theme-info-page.php:202
+msgid "Colors & Fonts"
+msgstr "Colores y fuentes"
+
+#: inc/theme-info-page.php:181
+msgid "Customize &rarr;"
+msgstr "Personalizar &rarr;"
+
+#: inc/theme-info-page.php:176
+msgid "If you have a logo image, you can upload it in the Site Identity section in the Customizer, and it will appear in your website's header."
+msgstr "Si tienes una imagen de logotipo, puedes subirla en la sección «Identidad del sitio» en el Personalizador, y aparecerá en la cabecera de tu web."
+
+#: inc/theme-info-page.php:96
+msgid "Customize & Configure"
+msgstr "Personalizar y configurar"
+
+#: inc/theme-info-page.php:87
+msgid "Get the PRO version &rarr;"
+msgstr "Obtener la versión PRO &rarr;"
+
+#: inc/theme-info-page.php:83
+msgid "Customize Foodica &rarr;"
+msgstr "Personalizar Foodica &rarr;"
+
+#: inc/theme-info-page.php:79
+msgid "Thank you for installing the free version of our theme! Below you can find quick links to different sections where you can configure and customize the theme. The free version includes limited features and customization options, but if you need more flexibility and plan to take your website to the next level, make sure to check the PRO version."
+msgstr "¡Gracias por instalar la versión gratuita de nuestro tema! A continuación puedes encontrar enlaces rápidos a diferentes secciones donde puedes configurar y personalizar el tema. La versión gratuita incluye características y opciones de personalización limitadas, pero si necesitas más flexibilidad y planeas llevar tu web al siguiente nivel, asegúrate de comprobar la versión PRO."
+
+#: inc/theme-info-page.php:78
+msgid "Welcome to Foodica!"
+msgstr "¡Te damos la bienvenida a Foodica!"
+
+#: inc/theme-info-page.php:65
+msgid "Free vs. PRO"
+msgstr "Gratis vs PRO"
+
+#: inc/theme-info-page.php:63
+msgid "Quick Start"
+msgstr "Inicio rápido"
+
+#: inc/theme-info-page.php:20
+msgid "Foodica Theme"
+msgstr "Tema Foodica"
+
+#: inc/theme-info-page.php:19
+msgid "Foodica Theme Dashboard"
+msgstr "Escritorio del tema Foodica"
+
+#: inc/customizer/bootstrap.php:59
+msgid "https://www.wpzoom.com/themes/foodica/?utm_campaign=foodica_lite_btn"
+msgstr "https://www.wpzoom.com/themes/foodica/?utm_campaign=foodica_lite_btn"
+
+#: inc/classes/class-foodica-notice-review.php:104
+msgid "Leave a Review"
+msgstr "Deja una reseña"
+
+#. Translators: %1$s current user display name.
+#: inc/classes/class-foodica-notice-review.php:91
+msgid "We hope you are enjoying the %1$s theme! %2$sIf you can spare a moment, please consider adding a review on WordPress.org."
+msgstr "¡Esperamos que estés disfrutando del tema %1$s! %2$sSi tienes un momento, considera la posibilidad de añadir una reseña en WordPress.org."
+
+#: inc/classes/class-foodica-notice-review.php:85
+msgid "Leave us a review!"
+msgstr "¡Déjanos una reseña!"
+
+#: inc/admin-notice.php:95
+msgid "Discover Foodica PRO &rarr;"
+msgstr "Descubre Foodica PRO &rarr;"
+
+#. translators: %s: Foodica theme
+#: inc/admin-notice.php:91
+msgid "%s Dashboard &rarr;"
+msgstr "%sEscritorio &rarr;"
+
+#. translators: %1$s: Foodica theme %2$s: anchor tag open %3$s: anchor tag
+#. close
+#: inc/admin-notice.php:84
+msgid "Thank you for installing %1$s theme! To get started please make sure you visit the %2$sgetting started page%3$s."
+msgstr "¡Gracias por instalar el tema %1$s! Para dar los primeros pasos, asegúrate de visitar la %2$s página «cómo empezar»%3$s."
+
+#: inc/admin-notice.php:80
+msgid "Discover Foodica"
+msgstr "Descubre Foodica"
+
+#: inc/customizer/custom-controls/font-presets/class-foodica-customize-font-presets-control.php:41
+msgid "View Presets"
+msgstr "Ver los preajustes"
+
+#: inc/customizer/custom-controls/font-presets/class-foodica-customize-font-presets-control.php:36
+msgid "Choosing a preset will override all the font settings."
+msgstr "La elección de un preajuste anulará todos los ajustes de la fuente."
+
+#: inc/customizer/custom-controls/font-presets/class-foodica-customize-font-presets-control.php:35
+msgid "Presets"
+msgstr "Preajustes"
+
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:33
+msgid "Widget Title"
+msgstr "Título de widget"
+
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:33
+msgid "Top Menu Links"
+msgstr "Enlaces del menú superior"
+
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:33
+msgid "Homepage Slider Title"
+msgstr "Título del carrusel de portada"
+
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:33
+msgid "Homepage Slider Button"
+msgstr "Botón de carrusel de portada"
+
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:33
+msgid "Site Title"
+msgstr "Título del sitio"
+
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:33
+msgid "Site Description"
+msgstr "Descripción del sitio"
+
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:33
+msgid "Single Post Title"
+msgstr "Título de entrada individual"
+
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:33
+msgid "Single Post Content"
+msgstr "Contenido de entrada individual"
+
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:33
+msgid "Blog Posts Title"
+msgstr "Título de entradas del blog"
+
+#: inc/customizer/configs/typography/class-foodica-typo-panel-config.php:33
+msgid "Typography"
+msgstr "Tipografía"
+
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:33
+msgid "Single Page Title"
+msgstr "Título de página individual"
+
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:33
+msgid "Main Menu Links (Mobile)"
+msgstr "Enlace de menú principal (móvil)"
+
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:33
+msgid "Main Menu Links"
+msgstr "Enlaces de menú principal"
+
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:33
+msgid "Body"
+msgstr "Cuerpo"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:153
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:153
+msgid "Line Height"
+msgstr "Interlineado"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:145
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:145
+msgid "Lowercase"
+msgstr "Minúsculas"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:144
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:144
+msgid "Uppercase"
+msgstr "Mayúsculas"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:143
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:143
+msgid "Capitalize"
+msgstr "Capitalizar"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:142
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:142
+msgctxt "text transform"
+msgid "None"
+msgstr "Ninguna"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:141
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:141
+msgctxt "text transform"
+msgid "Inherit"
+msgstr "Heredar"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:137
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:137
+msgid "Text Transform"
+msgstr "Transformar texto"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:124
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:124
+msgid "Font Weight"
+msgstr "Peso de la fuente"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:112
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:112
+msgid "Font Size (px)"
+msgstr "Tamaño de fuente (px)"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:103
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:103
+msgid "Only selected Font Variants will be loaded from Google Fonts."
+msgstr "Solo se cargarán desde Google Fonts las variantes de fuentes seleccionadas."
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:102
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:102
+msgid "Variants"
+msgstr "Variantes"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-body-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-nav-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-nav-mobile-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-page-title-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-post-title-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-content-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-single-post-title-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-site-description-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-site-title-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-slider-button-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-slider-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-top-menulinks-config.php:92
+#: inc/customizer/configs/typography/class-foodica-typo-widgets-config.php:92
+msgid "Font Family"
+msgstr "Familia de fuentes"
+
+#: inc/customizer/configs/typography/class-foodica-typo-archive-post-content-config.php:33
+msgid "Post Content (Homepage, Categories)"
+msgstr "Contenido de entrada (portada, categorías)"
+
+#: inc/customizer/class-foodica-customizer.php:356
+msgid "System Fonts"
+msgstr "Fuentes de sistema"
+
+#: inc/customizer/class-foodica-customizer.php:355
+msgid "Default System Font"
+msgstr "Fuente por defecto del sistema"
+
+#: inc/customizer/bootstrap.php:59
+msgid "<span style=\"display:block; background: #eff4f7; border-radius: 5px;padding:10px; border:2px solid #2497d4;\">🎨 There are 73 more color & font options in <strong>Foodica PRO</strong> <br/><br/>👉<strong><a href=\""
+msgstr "<span style=\"display:block; background: #eff4f7; border-radius: 5px;padding:10px; border:2px solid #2497d4;\">🎨 <strong>Foodica PRO</strong> tiene 73 opciones más de colores y fuentes<br/><br/>👉<strong><a href=\""
+
+#: inc/classes/class-foodica-font-family-manager.php:252
+#: inc/customizer/class-foodica-customizer.php:336
+#: inc/customizer/custom-controls/font-variant/class-foodica-customize-font-variant-control.php:88
+#: inc/customizer/custom-controls/typography/class-foodica-customize-typography-control.php:104
+msgid "Inherit"
+msgstr "Heredar"
+
+#: inc/classes/class-foodica-font-family-manager.php:236
+msgid "900 Italic"
+msgstr "900 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:235
+msgid "Ultra-Bold 900"
+msgstr "Ultra-Bold 900"
+
+#: inc/classes/class-foodica-font-family-manager.php:234
+msgid "800 Italic"
+msgstr "800 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:233
+msgid "Extra-Bold 800"
+msgstr "Extra-Bold 800"
+
+#: inc/classes/class-foodica-font-family-manager.php:232
+msgid "700 Italic"
+msgstr "700 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:231
+msgid "Bold 700"
+msgstr "Bold 700"
+
+#: inc/classes/class-foodica-font-family-manager.php:230
+msgid "600 Italic"
+msgstr "600 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:229
+msgid "Semi-Bold 600"
+msgstr "Semi-Bold 600"
+
+#: inc/classes/class-foodica-font-family-manager.php:228
+msgid "500 Italic"
+msgstr "500 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:227
+msgid "Medium 500"
+msgstr "Medium 500"
+
+#: inc/classes/class-foodica-font-family-manager.php:226
+msgid "400 Italic"
+msgstr "400 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:225
+msgid "Normal 400"
+msgstr "Normal 400"
+
+#: inc/classes/class-foodica-font-family-manager.php:224
+msgid "300 Italic"
+msgstr "300 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:223
+msgid "Light 300"
+msgstr "Light 300"
+
+#: inc/classes/class-foodica-font-family-manager.php:222
+msgid "200 Italic"
+msgstr "200 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:221
+msgid "Extra-Light 200"
+msgstr "Extra-Light 200"
+
+#: inc/classes/class-foodica-font-family-manager.php:220
+msgid "100 Italic"
+msgstr "100 Italic"
+
+#: inc/classes/class-foodica-font-family-manager.php:219
+msgid "Thin 100"
+msgstr "Thin 100"
+
+#: inc/customizer/bootstrap.php:129
+msgid "Footer Widget Areas"
+msgstr "Área de widgets del pie de página"
+
+#: inc/customizer/bootstrap.php:18
+msgid "Footer Layout"
+msgstr "Diseño del pie de página"
+
+#: inc/classes/class-foodica-notice-review.php:106
+msgid "Hide this notice"
+msgstr "Ocultar este aviso"
+
+#: inc/classes/class-foodica-notices.php:128
+msgid "Cheatin&#8217; huh?"
+msgstr "Haciendo trampas, ¿eh?"
+
+#: functions.php:48
+msgid "Mobile Menu"
+msgstr "Menú móvil"
+
+#: functions.php:225
+msgid "Loading..."
+msgstr "Cargando..."
+
+#: functions.php:224
+msgid "Load More..."
+msgstr "Cargar más..."
+
+#. Template Name of the theme
+msgid "Recipe Index (Infinite Scroll)"
+msgstr "Índice de recetas (scroll infinito)"
+
+#: inc/customizer/bootstrap.php:114
+msgid "Single Pages Layout"
+msgstr "Diseño de las páginas individuales"
+
+#: inc/customizer/bootstrap.php:99
+msgid "Single Posts Layout"
+msgstr "Diseño de las entradas individuales"
+
+#: inc/customizer/bootstrap.php:84
+msgid "Archive Pages Layout (Categories)"
+msgstr "Diseño de las páginas de archivo (categorías)"
+
+#: inc/customizer/bootstrap.php:69
+msgid "Homepage Layout"
+msgstr "Diseño de la página de inicio"
+
+#: inc/customizer/bootstrap.php:12
+msgid "Theme Layout"
+msgstr "Diseño del tema"
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:364
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "El siguiente plugin recomendado está inactivo: %1$s."
+msgstr[1] "Los siguientes plugins recomendado están inactivos: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:358
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "El siguiente plugin necesario está actualmente desactivado: %1$s."
+msgstr[1] "Los siguientes plugins necesarios están desactivados: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:352
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Hay una actualización disponible para: %1$s."
+msgstr[1] "Hay actualizaciones disponibles para los siguientes plugins: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:346
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "El siguiente plugin debe actualizarse a la versión más reciente para asegurar la máxima compatibilidad con este tema: %1$s."
+msgstr[1] "Los siguientes plugins deben actualizarse a la versión más reciente para asegurar la máxima compatibilidad con este tema: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:340
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Este tema recomienda el siguiente plugin: %1$s."
+msgstr[1] "Este tema recomienda los siguientes plugins: %1$s."
+
+#. translators: 1: plugin name(s).
+#: inc/class-tgm-plugin-activation.php:334
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Este tema necesita el siguiente plugin: %1$s."
+msgstr[1] "Este tema necesita los siguientes plugins: %1$s."
+
+#: sidebar.php:28
+msgid "Meta"
+msgstr "Meta"
+
+#: sidebar.php:20
+msgid "Popular Tags"
+msgstr "Etiquetas populares"
+
+#: sidebar.php:16
+msgid "Categories"
+msgstr "Categorías"
+
+#: sidebar.php:12
+msgid "Recent Posts"
+msgstr "Entradas recientes"
+
+#. Template Name of the theme
+msgid "Full-width Page"
+msgstr "Página a ancho completo"
+
+#: searchform.php:3
+msgid "Search"
+msgstr "Buscar"
+
+#: searchform.php:2
+msgid "Enter your keywords..."
+msgstr "Introduce tus palabras clave..."
+
+#: search.php:5
+msgid "Search Results for"
+msgstr "Resultados de búsqueda para"
+
+#: index.php:28
+msgid "Latest Posts"
+msgstr "Últimas entradas"
+
+#: inc/widgets.php:136
+msgid "Number of posts to show:"
+msgstr "Número de entradas a mostrar:"
+
+#: inc/widgets.php:126
+msgid "- Recent in all categories -"
+msgstr "- Reciente en todas las categorías -"
+
+#: inc/widgets.php:124
+msgid "Choose category:"
+msgstr "Elige categoría:"
+
+#: inc/widgets.php:120
+msgid "Title:"
+msgstr "Título:"
+
+#: inc/widgets.php:71
+msgid "Permanent Link to %s"
+msgstr "Enlace permanente a %s"
+
+#: inc/widgets.php:49
+msgctxt "Widget title link"
+msgid "%s &raquo;"
+msgstr "%s &raquo;"
+
+#: inc/jetpack/plugin-enhancements.php:396
+msgid "Your request was processed. See ya!"
+msgstr "Tu solicitud fue procesada. ¡Nos vemos!"
+
+#: inc/jetpack/plugin-enhancements.php:389
+msgid "Your request failed permission check."
+msgstr "Tu solicitud ha fallado en la comprobación de permisos."
+
+#: inc/jetpack/plugin-enhancements.php:293
+msgid "To use %1$s, please activate the Jetpack plugin&rsquo;s %2$s."
+msgstr "Para utilizar %1$s, por favor activa el plugin Jetpack&rsquo;s %2$s."
+
+#: inc/jetpack/plugin-enhancements.php:266
+msgid " Please install %1$s. %2$s"
+msgstr " Por favor, instala %1$s. %2$s"
+
+#: inc/jetpack/plugin-enhancements.php:256
+msgid " Please activate %1$s. %2$s"
+msgstr " Por favor activa %1$s. %2$s"
+
+#: inc/jetpack/plugin-enhancements.php:179
+msgid "Custom Content Types module"
+msgstr "Módulo de tipos de contenido personalizados"
+
+#: inc/jetpack/plugin-enhancements.php:178
+msgid "no specific module needed"
+msgstr "no es necesario ningún módulo específico"
+
+#: inc/jetpack/plugin-enhancements.php:160
+msgid "Portfolios"
+msgstr "Porfolios"
+
+#: inc/jetpack/plugin-enhancements.php:151
+msgid "Testimonials"
+msgstr "Recomendaciones"
+
+#: inc/jetpack/plugin-enhancements.php:142
+msgid "Comics"
+msgstr "Comics"
+
+#: inc/jetpack/plugin-enhancements.php:133
+msgid "Menus"
+msgstr "Menús"
+
+#: inc/jetpack/plugin-enhancements.php:124
+msgid "Social Menu"
+msgstr "Menú social"
+
+#: inc/jetpack/plugin-enhancements.php:115
+msgid "Featured Content"
+msgstr "Contenido destacado"
+
+#: inc/jetpack/plugin-enhancements.php:106 inc/theme-info-page.php:173
+msgid "Site Logo"
+msgstr "Logo del sitio"
+
+#: inc/jetpack/plugin-enhancements.php:83
+msgid "Jetpack plugin"
+msgstr "Plugin Jetpack"
+
+#: inc/jetpack/plugin-enhancements.php:82
+msgid "The %1$s is necessary to use some of this theme&rsquo;s features, including: "
+msgstr "El %1$s es necesario para usar algunas de las características de este tema, incluido:"
+
+#: inc/customizer/trt-customize-pro/upgrade-pro/class-customize.php:79
+msgid "View Foodica PRO"
+msgstr "Ver Foodica PRO"
+
+#: inc/customizer/trt-customize-pro/upgrade-pro/class-customize.php:78
+msgid "Unlock more features: 10 Color Schemes, Recipe Index, 600+ Google Fonts, 100+ Color options and more!"
+msgstr "Desbloquea más características: ¡10 combinaciones de colores, índice de recetas, más de 600 fuentes de Google, más de 100 opciones de color y más!"
+
+#: inc/customizer/bootstrap.php:58
+msgid "Footer Menu Background Color"
+msgstr "Color de fondo del menú de pie de página"
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3520
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando plugin %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3518
+msgid "All installations have been completed."
+msgstr "Todas las instalaciones han terminado."
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3509
+#: inc/class-tgm-plugin-activation.php:3517
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado correctamente."
+
+#: inc/class-tgm-plugin-activation.php:3515
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "El proceso de instalación está comenzando. Este proceso puede tardar un poco en algunos alojamientos, así que, por favor, sé paciente."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3512
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalando y activando el plugin %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3510
+msgid "All installations and activations have been completed."
+msgstr "Han terminado todas las instalaciones y activaciones."
+
+#: inc/class-tgm-plugin-activation.php:3507
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "El proceso de instalación y activación está comenzando. Este proceso puede tardar un poco en algunos alojamientos, así que, por favor, sé paciente."
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:3503
+msgid "The installation of %1$s failed."
+msgstr "La instalación de %1$s ha fallado."
+
+#. translators: 1: plugin name, 2: error message.
+#: inc/class-tgm-plugin-activation.php:3501
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Ha ocurrido un error durante la instalación de %1$s: <strong>%2$s</strong>."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: inc/class-tgm-plugin-activation.php:3498
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Actualizando el plugin %1$s (%2$d/%3$d)"
+
+#: inc/class-tgm-plugin-activation.php:3158
+msgid "Plugin activation failed."
+msgstr "Ha fallado la activación del plugin."
+
+#: inc/class-tgm-plugin-activation.php:2934
+msgid "No plugins are available to be activated at this time."
+msgstr "No hay plugins disponibles para activar en este momento."
+
+#: inc/class-tgm-plugin-activation.php:2908
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "No se han seleccionado plugins para activar. No se realizará ninguna acción."
+
+#: inc/class-tgm-plugin-activation.php:2802
+msgid "No plugins are available to be updated at this time."
+msgstr "No hay plugins disponibles para actualizar en este momento."
+
+#: inc/class-tgm-plugin-activation.php:2800
+msgid "No plugins are available to be installed at this time."
+msgstr "No hay plugins disponibles para instalar en este momento."
+
+#: inc/class-tgm-plugin-activation.php:2759
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "No se han seleccionado plugins para actualizar. No se realizará ninguna acción."
+
+#: inc/class-tgm-plugin-activation.php:2757
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "No se han seleccionado plugins para instalar. No se realizará ninguna acción."
+
+#: inc/class-tgm-plugin-activation.php:2726
+#: inc/jetpack/plugin-enhancements.php:258
+msgid "Activate"
+msgstr "Activar"
+
+#: inc/class-tgm-plugin-activation.php:2723
+msgid "Update"
+msgstr "Actualizar"
+
+#: inc/class-tgm-plugin-activation.php:2717
+#: inc/jetpack/plugin-enhancements.php:268
+msgid "Install"
+msgstr "Instalar"
+
+#: inc/class-tgm-plugin-activation.php:2684
+msgid "Upgrade message from the plugin author:"
+msgstr "Mensaje de actualización del autor del plugin:"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2614
+msgid "Activate %2$s"
+msgstr "Activar %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2608
+msgid "Update %2$s"
+msgstr "Actualizar %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: inc/class-tgm-plugin-activation.php:2603
+msgid "Install %2$s"
+msgstr "Instalar %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2554
+msgid "Status"
+msgstr "Estado"
+
+#: inc/class-tgm-plugin-activation.php:2553
+msgid "Version"
+msgstr "Versión"
+
+#: inc/class-tgm-plugin-activation.php:2549
+msgid "Type"
+msgstr "Tipo"
+
+#: inc/class-tgm-plugin-activation.php:2548
+msgid "Source"
+msgstr "Fuente"
+
+#: inc/class-tgm-plugin-activation.php:2547
+msgid "Plugin"
+msgstr "Plugin"
+
+#: inc/class-tgm-plugin-activation.php:2533
+msgid "No plugins to install, update or activate."
+msgstr "No hay plugins para instalar, actualizar o activar."
+
+#: inc/class-tgm-plugin-activation.php:2510
+msgid "Available version:"
+msgstr "Versión disponible:"
+
+#: inc/class-tgm-plugin-activation.php:2498
+msgid "Minimum required version:"
+msgstr "Versión mínima requerida:"
+
+#: inc/class-tgm-plugin-activation.php:2490
+msgid "Installed version:"
+msgstr "Versión instalada:"
+
+#: inc/class-tgm-plugin-activation.php:2482
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "desconocida"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2400
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Para activar <span class=\"count\">(%s)</span>"
+msgstr[1] "Para activar <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2396
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Actualización disponible <span class=\"count\">(%s)</span>"
+msgstr[1] "Actualización disponible <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2392
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "Para instalar <span class=\"count\">(%s)</span>"
+msgstr[1] "Para instalar <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: inc/class-tgm-plugin-activation.php:2388
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Todos <span class=\"count\">(%s)</span>"
+msgstr[1] "Todos <span class=\"count\">(%s)</span>"
+
+#. translators: 1: install status, 2: update status
+#: inc/class-tgm-plugin-activation.php:2342
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: inc/class-tgm-plugin-activation.php:2333
+msgid "Update recommended"
+msgstr "Actualización recomendada"
+
+#: inc/class-tgm-plugin-activation.php:2330
+msgid "Requires Update"
+msgstr "Requiere actualización"
+
+#: inc/class-tgm-plugin-activation.php:2327
+msgid "Required Update not Available"
+msgstr "No está disponible la actualización necesaria"
+
+#: inc/class-tgm-plugin-activation.php:2321
+msgid "Active"
+msgstr "Activo"
+
+#: inc/class-tgm-plugin-activation.php:2319
+msgid "Installed But Not Activated"
+msgstr "Instalado, pero no activado"
+
+#: inc/class-tgm-plugin-activation.php:2315
+msgid "Not Installed"
+msgstr "No instalado"
+
+#: inc/class-tgm-plugin-activation.php:2298
+msgid "Pre-Packaged"
+msgstr "Pre-empaquetado"
+
+#: inc/class-tgm-plugin-activation.php:2295
+msgid "External Source"
+msgstr "Fuente externa"
+
+#: inc/class-tgm-plugin-activation.php:2292
+msgid "WordPress Repository"
+msgstr "Repositorio de WordPress"
+
+#: inc/class-tgm-plugin-activation.php:2276
+msgid "Recommended"
+msgstr "Recomendado"
+
+#: inc/class-tgm-plugin-activation.php:2273
+msgid "Required"
+msgstr "Necesario"
+
+#. translators: %s: version number
+#: inc/class-tgm-plugin-activation.php:1982
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: inc/class-tgm-plugin-activation.php:1121
+#: inc/class-tgm-plugin-activation.php:2948
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "y"
+
+#: inc/class-tgm-plugin-activation.php:937
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "El paquete remoto del plugin está compuesto por más de un archivo, pero los archivos no están dentro de una carpeta."
+
+#: inc/class-tgm-plugin-activation.php:934
+#: inc/class-tgm-plugin-activation.php:937
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Por favor, ponte en contacto con el autor del plugin y pídele que lo empaquete de acuerdo a las prácticas recomendadas de WordPress."
+
+#: inc/class-tgm-plugin-activation.php:934
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "El paquete remoto del plugin no contiene una carpeta con el slug apropiado y no funcionó el cambio de nombre."
+
+#: inc/class-tgm-plugin-activation.php:523
+msgid "Update Required"
+msgstr "Actualización necesaria"
+
+#: inc/class-tgm-plugin-activation.php:522
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Este plugin debe actualizarse para que sea compatible con tu tema."
+
+#: inc/class-tgm-plugin-activation.php:397
+msgid "Please contact the administrator of this site for help."
+msgstr "Por favor, pídele ayuda al administrador de este sitio."
+
+#: inc/class-tgm-plugin-activation.php:396
+msgid "There are one or more required or recommended plugins to install, update or activate."
+msgstr "Hay uno o más plugins necesarios o recomendados para instalar, actualizar o activar."
+
+#: inc/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr "Descartar este aviso"
+
+#. translators: 1: dashboard link.
+#: inc/class-tgm-plugin-activation.php:394
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos los plugins instalados y activados correctamente. %1$s"
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:392
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "El plugin no se ha activado. Este tema necesita una versión superior de  %s. Por favor, actualiza el plugin."
+
+#. translators: 1: plugin name.
+#: inc/class-tgm-plugin-activation.php:390
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "No se realizó ninguna acción. El plugin %1$s ya estaba activo."
+
+#: inc/class-tgm-plugin-activation.php:388
+#: inc/class-tgm-plugin-activation.php:2952
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "El siguiente plugin se ha activado correctamente:"
+msgstr[1] "Los siguientes plugins se han activado correctamente:"
+
+#: inc/class-tgm-plugin-activation.php:387
+#: inc/class-tgm-plugin-activation.php:3159
+msgid "Plugin activated successfully."
+msgstr "Plugin activado correctamente."
+
+#: inc/class-tgm-plugin-activation.php:386
+#: inc/class-tgm-plugin-activation.php:827
+#: inc/class-tgm-plugin-activation.php:2533
+#: inc/class-tgm-plugin-activation.php:3580
+msgid "Return to the Dashboard"
+msgstr "Volver al escritorio"
+
+#: inc/class-tgm-plugin-activation.php:385
+msgid "Return to Required Plugins Installer"
+msgstr "Volver al instalador de plugins necesarios"
+
+#: inc/class-tgm-plugin-activation.php:380
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Empezar a activar el plugin"
+msgstr[1] "Empezar a activar los plugins"
+
+#: inc/class-tgm-plugin-activation.php:375
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Empezar a actualizar el plugin"
+msgstr[1] "Empezar a actualizar los plugins"
+
+#: inc/class-tgm-plugin-activation.php:370
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Empezar a instalar el plugin"
+msgstr[1] "Empezar a instalar los plugins"
+
+#: inc/class-tgm-plugin-activation.php:333
+msgid "Something went wrong with the plugin API."
+msgstr "Algo ha ido mal con la API del plugin."
+
+#. translators: %s: plugin name.
+#: inc/class-tgm-plugin-activation.php:332
+msgid "Updating Plugin: %s"
+msgstr "Actualizando plugin: %s"
+
+#. translators: %s: plugin name.
+#: inc/class-tgm-plugin-activation.php:330
+msgid "Installing Plugin: %s"
+msgstr "Instalando plugin: %s"
+
+#: inc/class-tgm-plugin-activation.php:328
+msgid "Install Plugins"
+msgstr "Instalar plugins"
+
+#: inc/class-tgm-plugin-activation.php:327
+msgid "Install Required Plugins"
+msgstr "Instalar los plugins necesarios"
+
+#: inc/theme-info-page.php:501
+msgid "Support"
+msgstr "Ayuda"
+
+#: inc/theme-info-page.php:496
+msgid "Typography Options"
+msgstr "Opciones de tipografía"
+
+#: inc/theme-info-page.php:484
+msgid "Theme Options"
+msgstr "Opciones del tema"
+
+#: inc/theme-info-page.php:490
+msgid "Advertisting Options"
+msgstr "Opciones de publicidad"
+
+#: inc/theme-info-page.php:461
+msgid "Advanced WooCommerce Integration"
+msgstr "Integración avanzada con WooCommerce"
+
+#: inc/theme-info-page.php:451
+msgid "Slider Styles"
+msgstr "Estilos del carrusel"
+
+#: inc/theme-info-page.php:466
+msgid "Demo Content Importer"
+msgstr "Contenido actualizado correctamente"
+
+#: inc/theme-info-page.php:430
+msgid "Responsive Layout"
+msgstr "Disposición adaptable"
+
+#: inc/theme-info-page.php:425 inc/theme-info-page.php:534
+#: inc/theme-info-page.php:537
+msgid "Foodica PRO"
+msgstr "Foodica PRO"
+
+#: inc/theme-info-page.php:424
+msgid "Foodica Lite"
+msgstr "Foodica Lite"
+
+#: inc/theme-info-page.php:423
+msgid "Feature"
+msgstr "Característica"
+
+#: inc/theme-info-page.php:415
+msgid "Foodica Lite vs. Foodica PRO"
+msgstr "Foodica Lite vs. Foodica PRO"
+
+#: inc/theme-info-page.php:502
+msgid "Support Forum"
+msgstr "Foro de Soporte"
+
+#: inc/theme-info-page.php:553
+msgid "Documentation"
+msgstr "Documentación"
+
+#: inc/customizer/trt-customize-pro/upgrade-pro/class-customize.php:77
+msgid "Upgrade to Foodica PRO"
+msgstr "Mejorar a Foodica PRO"
+
+#: inc/admin-notice.php:94 inc/theme-info-page.php:86
+#: inc/theme-info-page.php:404
+msgid "https://www.wpzoom.com/themes/foodica/"
+msgstr "https://www.wpzoom.com/themes/foodica/"
+
+#: inc/admin-notice.php:70
+msgid "Dismiss this notice."
+msgstr "Descartar este aviso."
+
+#: inc/admin-notice.php:49
+msgid "You do not have the necessary permission to perform this action."
+msgstr "No tienes los permisos necesarios para realizar esta acción."
+
+#: inc/admin-notice.php:45 inc/classes/class-foodica-notices.php:124
+msgid "Action failed. Please refresh the page and retry."
+msgstr "Error en la acción. Por favor, recarga la página y vuelve a intentarlo."
+
+#: image.php:104 pagination.php:5
+msgid "Next &rarr;"
+msgstr "Siguiente &rarr;"
+
+#: image.php:103 pagination.php:4
+msgid "&larr; Previous"
+msgstr "&larr; Anterior"
+
+#: image.php:97
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Los comentarios y los trackbacks están cerrados."
+
+#: image.php:95
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Los trackbacks están cerrados, pero puedes <a class=\"comment-link\" href=\"#respond\" title=\"Escribir un comentario\">escribir un comentario</a>."
+
+#. translators: %s: trackback link
+#: image.php:93
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Los comentarios están cerrados, pero puedes dejar un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de trackback para tu entrada\" rel=\"trackback\">URL de trackback</a>."
+
+#. translators: %s: link to the post
+#: image.php:90
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Publicar un comentario\">Publica un comentario</a> o deja un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de trackback para tu entrada\" rel=\"trackback\">URL de trackback</a>."
+
+#. translators: %7$s: title of the parent post
+#: image.php:77
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>."
+msgstr "Publicado el <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</time></span> en <a href=\"%3$s\" title=\"Enlace a la imagen a tamaño completo\">%4$s &times; %5$s</a> en <a href=\"%6$s\" title=\"Volver a %7$s\" rel=\"gallery\">%7$s</a>."
+
+#: functions.php:352
+msgid "Full Width (no sidebar)"
+msgstr "Ancho completo (sin barra lateral)"
+
+#: functions.php:348
+msgid "Default"
+msgstr "Por defecto"
+
+#: functions.php:344
+msgid "Choose the layout for this post:"
+msgstr "Selecciona el diseño para esta entrada:"
+
+#: functions.php:330
+msgid "Post Layout"
+msgstr "Diseño de publicación"
+
+#: functions.php:295
+msgid "Header Social Icons"
+msgstr "Iconos sociales en la cabecera"
+
+#: functions.php:283
+msgid "Footer: Column 4"
+msgstr "Pie de página: columna 4"
+
+#: functions.php:274
+msgid "Footer: Column 3"
+msgstr "Pie de página: columna 3"
+
+#: functions.php:265
+msgid "Footer: Column 2"
+msgstr "Pie de página: columna 2"
+
+#: functions.php:256
+msgid "Footer: Column 1"
+msgstr "Pie de página: columna 1"
+
+#: functions.php:243
+msgid "Sidebar"
+msgstr "Barra lateral"
+
+#: functions.php:49
+#: inc/customizer/configs/typography/class-foodica-typo-footer-menu-config.php:33
+msgid "Footer Menu"
+msgstr "Menú de pie de página"
+
+#: functions.php:47
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: functions.php:46
+msgid "Top Menu"
+msgstr "Menú superior"
+
+#. Author URI of the theme
+#. translators: 1: designedby, 2: link, 3: span tag closed
+#: style.css footer.php:67
+msgid "https://www.wpzoom.com/"
+msgstr "https://www.wpzoom.com/"
+
+#. translators: 1: designedby, 2: link, 3: span tag closed
+#: footer.php:67
+msgid " %1$sFoodica WordPress Theme by %2$s%3$s"
+msgstr " %1$sTema Foodica para WordPress por %2$s%3$s"
+
+#. translators: 1: poweredby, 2: link, 3: span tag closed
+#: footer.php:65
+msgid "https://wordpress.org/"
+msgstr "https://es.wordpress.org/"
+
+#. translators: 1: poweredby, 2: link, 3: span tag closed
+#: footer.php:65
+msgid " %1$sPowered by %2$s%3$s"
+msgstr " %1$sFunciona gracias a %2$s %3$s"
+
+#. translators: %s: post title
+#. translators: %s: link to the post
+#: content-sticky.php:37 content.php:37 wpzoom-slider.php:42
+msgid "Read More"
+msgstr "Leer más"
+
+#. translators: %s: post title
+#. translators: %s: link to the post
+#: content-sticky.php:37 content.php:37 wpzoom-slider.php:42
+msgid "Permalink to %s"
+msgstr "Permalink a %s"
+
+#: content-sticky.php:23 content.php:23 wpzoom-slider.php:37
+msgid "Comments are Disabled"
+msgstr "Los comentarios están desactivados"
+
+#: content-sticky.php:23 content.php:23 wpzoom-slider.php:37
+msgid "% comments"
+msgstr "% comentarios"
+
+#: content-sticky.php:23 content.php:23 wpzoom-slider.php:37
+msgid "1 comment"
+msgstr "1 comentarios"
+
+#: content-sticky.php:23 content.php:23 wpzoom-slider.php:37
+msgid "0 comments"
+msgstr "Sin comentarios"
+
+#: content-sticky.php:17 content.php:17
+msgid "by"
+msgstr "por"
+
+#: content-single.php:50
+msgid "Print"
+msgstr "Imprimir"
+
+#: content-single.php:50
+msgid "Print this Page"
+msgstr "Imprimir esta página"
+
+#: content-single.php:47
+msgid "<h4>Tags</h4>"
+msgstr "<h4>Etiquetas</h4>"
+
+#: content-single.php:25
+msgid "in"
+msgstr "en"
+
+#: content-single.php:24
+msgid "on"
+msgstr "el"
+
+#: content-single.php:23
+msgid "Written by"
+msgstr "Escrito por"
+
+#: content-page.php:21 content-single.php:42 image.php:63
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: content-page.php:13 content-single.php:26 content-sticky.php:28
+#: content.php:28 image.php:99
+msgid "Edit"
+msgstr "Editar"
+
+#: content-none.php:24
+msgid "It seems that we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que no podemos encontrar lo que estás buscando. Quizás una nueva búsqueda puede ayudarte."
+
+#: content-none.php:19
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Lo siento, pero no hay nada que encaje con tus términos de la búsqueda. Inténtalo de nuevo con algunas palabras clave diferentes."
+
+#. translators: %s: link to new post page
+#: content-none.php:15
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "¿Preparado para publicar tu primera entrada? <a href=\"%1$s\">Empieza aquí</a>."
+
+#: content-none.php:10
+msgid "Nothing Found"
+msgstr "No se ha encontrado nada"
+
+#: comments.php:33
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: comments.php:24
+msgid "Newer Comments &rarr;"
+msgstr "Últimos comentarios &raquo;"
+
+#: comments.php:23
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios anteriores"
+
+#: comments.php:22
+msgid "Comment navigation"
+msgstr "Navegación de comentarios"
+
+#: comments.php:14
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#: 404.php:9
+msgid "Error 404"
+msgstr "Error 404"
+
+#. Author of the theme
+#: style.css
+#, gp-priority: low
+msgid "WPZOOM"
+msgstr "WPZOOM"
+
+#. Theme URI of the theme
+#: style.css
+#, gp-priority: low
+msgid "https://www.wpzoom.com/free-wordpress-themes/foodica-lite/"
+msgstr "https://www.wpzoom.com/free-wordpress-themes/foodica-lite/"

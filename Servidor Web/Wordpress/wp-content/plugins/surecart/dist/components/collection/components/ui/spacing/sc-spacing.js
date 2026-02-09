@@ -1,0 +1,1 @@
+import{Host,h}from"@stencil/core";export class ScSpacing{render(){return h(Host,{key:"485ff0e89c7ec25340565085212e8d9e82e6d932"},h("slot",{key:"dd6d6e34647d3b76dfe205abd22064a105b1a621"}))}static get is(){return"sc-spacing"}static get encapsulation(){return"shadow"}static get originalStyleUrls(){return{$:["sc-spacing.scss"]}}static get styleUrls(){return{$:["sc-spacing.css"]}}}

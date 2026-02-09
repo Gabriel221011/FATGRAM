@@ -1,0 +1,180 @@
+@font-face {
+  font-family: 'blognew-icons';
+  src:  url('../fonts/blognew-icons.eot?50ogjv');
+  src:  url('../fonts/blognew-icons.eot?50ogjv#iefix') format('embedded-opentype'),
+    url('../fonts/blognew-icons.ttf?50ogjv') format('truetype'),
+    url('../fonts/blognew-icons.woff?50ogjv') format('woff'),
+    url('../fonts/blognew-icons.svg?50ogjv#blognew-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="bnicon-"], [class*=" bnicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'blognew-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bnicon-video-post:before {
+  content: "\e902";
+}
+.bnicon-light-dark-toggle:before {
+  content: "\e906";
+}
+.bnicon-blognews-favicon:before {
+  content: "\e901";
+}
+.bnicon-breadcrumb:before {
+  content: "\e935";
+}
+.bnicon-accordion:before {
+  content: "\e900";
+}
+.bnicon-scroll-to-top:before {
+  content: "\e931";
+}
+.bnicon-date-and-time:before {
+  content: "\e903";
+}
+.bnicon-menus:before {
+  content: "\e904";
+}
+.bnicon-search:before {
+  content: "\e905";
+}
+.bnicon-copyright:before {
+  content: "\e907";
+}
+.bnicon-site-tagline:before {
+  content: "\e908";
+}
+.bnicon-site-title:before {
+  content: "\e909";
+}
+.bnicon-logo:before {
+  content: "\e90a";
+}
+.bnicon-post-comments:before {
+  content: "\e90b";
+}
+.bnicon-post-author:before {
+  content: "\e90c";
+}
+.bnicon-related-post:before {
+  content: "\e90d";
+}
+.bnicon-post-share-icon:before {
+  content: "\e90e";
+}
+.bnicon-post-pagination:before {
+  content: "\e90f";
+}
+.bnicon-advanced-post-meta:before {
+  content: "\e910";
+}
+.bnicon-post-featured-image:before {
+  content: "\e911";
+}
+.bnicon-post-tag:before {
+  content: "\e912";
+}
+.bnicon-post-categories:before {
+  content: "\e913";
+}
+.bnicon-archive-description:before {
+  content: "\e914";
+}
+.bnicon-archive-title:before {
+  content: "\e915";
+}
+.bnicon-post-description:before {
+  content: "\e916";
+}
+.bnicon-post-title:before {
+  content: "\e917";
+}
+.bnicon-template:before {
+  content: "\e918";
+}
+.bnicon-offcanvas:before {
+  content: "\e919";
+}
+.bnicon-featured-list:before {
+  content: "\e91a";
+}
+.bnicon-express-post:before {
+  content: "\e91b";
+}
+.bnicon-featured-post:before {
+  content: "\e91c";
+}
+.bnicon-filter-tab-2:before {
+  content: "\e91d";
+}
+.bnicon-filter-tab-1:before {
+  content: "\e91e";
+}
+.bnicon-button:before {
+  content: "\e91f";
+}
+.bnicon-taxonomy:before {
+  content: "\e920";
+}
+.bnicon-heading:before {
+  content: "\e921";
+}
+.bnicon-post-carousel-2:before {
+  content: "\e922";
+}
+.bnicon-post-carousel-1:before {
+  content: "\e923";
+}
+.bnicon-post-blog-slider:before {
+  content: "\e924";
+}
+.bnicon-post-grid-5:before {
+  content: "\e925";
+}
+.bnicon-post-grid-4:before {
+  content: "\e926";
+}
+.bnicon-post-grid-3:before {
+  content: "\e927";
+}
+.bnicon-post-grid-2:before {
+  content: "\e928";
+}
+.bnicon-post-grid-1:before {
+  content: "\e929";
+}
+.bnicon-post-blog-2:before {
+  content: "\e92a";
+}
+.bnicon-post-blog-1:before {
+  content: "\e92b";
+}
+.bnicon-ticker:before {
+  content: "\e92c";
+}
+.bnicon-post-list-2:before {
+  content: "\e92d";
+}
+.bnicon-post-list-1:before {
+  content: "\e92e";
+}
+.bnicon-archive-post-list:before {
+  content: "\e92f";
+}
+.bnicon-archive-post:before {
+  content: "\e930";
+}
