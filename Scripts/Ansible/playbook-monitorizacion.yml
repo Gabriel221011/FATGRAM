@@ -1,0 +1,115 @@
+---
+- name: Preparación del usuario de monitorización y los scripts de monitorización y Ansible
+  hosts: monitorizacion
+  become: yes
+  become_user: root
+  tasks:
+    - name: Crear usuario "monitorizacion"
+      user:
+        name: monitorizacion
+        state: present
+        shell: /bin/bash
+        
+    - name: Configurar grupos para el usuario "monitorizacion"
+      ansible.builtin.user:
+        name: monitorizacion
+        groups:
+          - sudo
+          - monitorizacion
+        append: yes
+
+- name: Preparación de los servidores y el proxy para la monitorización
+  hosts: monitorizacion
+  become: yes
+  become_user: monitorizacion
+  tasks:
+    - name: Actualizar repositorios (apt update)
+      apt:
+        update_cache: yes
+
+    - name: Instalar Git, Ansible y Python3
+      apt:
+        name:
+          - git
+          - ansible
+          - python3
+          - python3-pip
+        state: present
+
+    - name: Crear carpeta de ssh para el usuario "monitorizacion"
+      file:
+        path: /home/monitorizacion/.ssh
+        state: directory
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0700'
+
+    - name: Copiar la clave a la carpeta de los usuarios de los servidores
+      copy:
+        src: /home/monitorizacion/.ssh/fatgram.pem
+        dest: /home/monitorizacion/.ssh/fatgram.pem
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0400'
+
+    - name: Crear carpeta para almacenar scripts de monitorización
+      file:
+        path: /home/monitorizacion/scripts
+        state: directory
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0755'
+
+    - name: Crear carpeta para almacenar los scripts de Ansible
+      file:
+        path: /home/monitorizacion/scripts/ansible
+        state: directory
+        owner: monitorizacion
+        group: monitorizacion
+
+    - name: Clonar repositorio
+      git:
+        repo: 'https://github.com/Gabriel221011/FATGRAM'
+        dest: /home/monitorizacion/FATGRAM
+        version: main
+
+    - name: Copiar scripts desde Github a la carpeta de scripts de monitorización
+      copy:
+        src: /home/monitorizacion/FATGRAM/Scripts/Monitorizacion/monitorizacion.py
+        dest: /home/monitorizacion/scripts/
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0755'
+      notify:
+          - Cambio de archivo
+
+    - name: Copiar archivos de Ansible desde Github a la carpeta de scripts de monitorización
+      copy:
+        src: /home/monitorizacion/FATGRAM/Scripts/Ansible/
+        dest: /home/monitorizacion/scripts/ansible/
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0755'
+      notify:
+          - Cambio de archivo
+
+    - name: Copiar los archivos necesarios de la carpeta de Ansible a la carpeta de scripts de monitorización
+      copy:
+        src: /home/monitorizacion/FATGRAM/Scripts/Ansible/*
+        dest: /home/monitorizacion/scripts/ansible/
+        owner: monitorizacion
+        group: monitorizacion
+        mode: '0755'
+
+    - name: Ejecutar el script de Ansible para configurar los servidores y el proxy
+      command: ansible-playbook /home/monitorizacion/scripts/ansible/playbook-servidores.yml
+      become: yes
+      become_user: monitorizacion
+      
+    - name: Borrar el repositorio clonado para liberar espacio
+      file:
+        path: /home/monitorizacion/FATGRAM
+        state: absent
+
+  handlers:
+    - name: Cambio de archivo

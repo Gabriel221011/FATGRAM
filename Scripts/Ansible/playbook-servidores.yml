@@ -14,17 +14,51 @@
           - nginx
           - php
           - mariadb-server
+          - python3
+          - python3-pip
         state: present
+
+    - name: IPForwarding
+      sysctl:
+        name: net.ipv4.ip_forward
+        value: '1'
+        sysctl_set: yes
+        state: present
+        reload: yes
+ 
+    - name: Crear directorio
+      file:
+        path: /etc/iptables
+        state: directory
+        mode: '0755'
+ 
+    - name: Configurar iptables
+      shell: 
+        sudo iptables -t nat -A POSTROUTING -o ens5 -j MASQUERADE
+      become: yes
+ 
+    - name: "Guardar reglas de iptables para que se apliquen al reiniciar"
+      shell: 
+        iptables-save > /etc/iptables/rules.v4
+      become: yes
+ 
+    - name: Instalacion de iptables-persistent para guardar reglas de iptables al reiniciar
+      apt:
+        name: iptables-persistent
+        state: present
+
     - name: Configurar git para el usuario actual # Configuración de git del administrador del Github
       git_config:
         name: user.email
         value: "pablosainzdelamaza@gmail.com"
         scope: global
+
     - name: Clonar el respositorio de Fatgram
       git:
         repo: 'https://github.com/Gabriel221011/FATGRAM.git'
         dest: /home/ubuntu/FATGRAM
         version: main
+
     - name: Copiar el archivo de configuración de Nginx para Fatgram
       copy:
         src: /home/ubuntu/FATGRAM/Servidor Web/Configuracion de Nginx/
@@ -34,7 +68,12 @@
         mode: '0644'
       notify:
           - Reiniciar Nginx
-    
+
+    - name: Borrar el repositorio clonado para liberar espacio
+      file:
+        src: /home/ubuntu/FATGRAM
+        state: absent
+
   handlers:
     - name: Reiniciar Nginx
       service:
