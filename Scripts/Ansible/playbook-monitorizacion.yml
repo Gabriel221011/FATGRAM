@@ -2,7 +2,6 @@
 - name: Preparación del usuario de monitorización y los scripts de monitorización y Ansible
   hosts: monitorizacion
   become: yes
-  become_user: root
   tasks:
     - name: Crear usuario "monitorizacion"
       user:
@@ -34,10 +33,21 @@
         group: monitorizacion
         mode: '0400'
 
+- name: Transferir clave a los servidores
+  hosts: servidores_web
+  become: yes
+  tasks:
+    - name: Copiar la clave a la carpeta de los usuarios de los servidores
+      copy:
+        src: /home/monitorizacion/.ssh/fatgram.pem
+        dest: /home/ubuntu/.ssh/fatgram.pem
+        owner: ubuntu
+        group: ubuntu
+        mode: '0400'
+
 - name: Preparación de los servidores y el proxy para la monitorización
   hosts: monitorizacion
   become: yes
-  become_user: monitorizacion
   tasks:
     - name: Actualizar repositorios (apt update)
       apt:
@@ -51,9 +61,6 @@
           - python3
           - python3-pip
         state: present
-
-    - name: Copiar la clave a la carpeta de los usuarios de los servidores
-      command: scp -i /home/monitorizacion/.ssh/fatgram.pem /home/monitorizacion/.ssh/fatgram.pem ubuntu@{{ inventory_hostname }}:/home/ubuntu/.ssh/
 
     - name: Crear carpeta para almacenar scripts de monitorización
       file:
@@ -83,8 +90,6 @@
         owner: monitorizacion
         group: monitorizacion
         mode: '0755'
-      notify:
-          - Cambio de archivo
 
     - name: Copiar archivos de Ansible desde Github a la carpeta de scripts de monitorización
       copy:
@@ -93,8 +98,6 @@
         owner: monitorizacion
         group: monitorizacion
         mode: '0755'
-      notify:
-          - Cambio de archivo
 
     - name: Copiar los archivos necesarios de la carpeta de Ansible a la carpeta de scripts de monitorización
       copy:
@@ -114,5 +117,3 @@
         path: /home/monitorizacion/FATGRAM
         state: absent
 
-  handlers:
-    - name: Cambio de archivo

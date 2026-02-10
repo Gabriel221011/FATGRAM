@@ -1,6 +1,6 @@
 ---
 - name: Configuración de la instancia Proxy
-  hosts: proxy
+  hosts: proxy_nat
   become: yes
   tasks:
     - name: Actualizar el índice de repositorios (apt update)

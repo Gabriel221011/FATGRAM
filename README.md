@@ -25,17 +25,17 @@ En este apartado se muestra toda la infraestructura de nuestra nube de AWS para 
 ### Configuración de la VPC
 Esta es la configuración de nuestra VPC de AWS
 
-| Nombre | CIDR | Zona de disponibilidad | Región |
-|:------:|:----:|:----------------------:|:------:|
-| proyecto-intermodular-vpc | 10.0.0.0/16 | us-east1 | us-east1a, us-east1b (Región para la subred del RDS) |
+| Nombre | CIDR | Región | Zona de disponibilidad |
+|:------:|:----:|:------:|:----------------------:|
+| proyecto-intermodular-vpc | 10.0.0.0/16 | us-east1 | us-east1a, us-east1b (Zona de disponibilidad para la subred del RDS) |
 
 ![Mapa de recursos de la VPC](Imagenes/mapa_vpc.png)
 
 ### Configuración de la subredes
 Esta tabla muestra la configuración de las subredes de nuestra VPC
 
-| Subredes | CIDR | Zona de disponibilidad y región | Región |
-|:--------:|:----:|:-------------------------------:|:------:|
+| Subredes | CIDR | Región | Zona de disponibilidad |
+|:--------:|:----:|:------:|:----------------------:|
 | proyecto-intermodular-subnet-public1-us-east-1a | 10.0.0.0/24 | us-east-1 | us-east-1a |
 | proyecto-intermodular-subnet-private1-us-east-1a | 10.0.128.0/24 | us-east-1 | us-east-1a |
 | subred-rds | 10.0.30.0/24 | us-east-1 | us-east-1b |

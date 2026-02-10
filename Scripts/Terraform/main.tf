@@ -46,11 +46,18 @@ resource "aws_subnet" "subnet_rds" {
     Name = "proyecto-intermodular-subnet-rds"
   }
 }
-# Creación de IP elástica
+# Creación de IP elástica para el proxy
 resource "aws_eip" "proxy_eip" {
   instance = aws_instance.proxy.id
   tags = {
     Name = "proxy-eip"
+  }
+}
+
+resource "aws_eip" "monitorizacion_eip" {
+  instance = aws_instance.monitorizacion.id
+  tags = {
+    Name = "monitorizacion-eip"
   }
 }
 # Tabla de ruta de la subred pública
@@ -97,7 +104,7 @@ resource "aws_security_group" "gs_proxy_nat" {
   description = "Grupo de seguridad para el proxy"
   vpc_id      = aws_vpc.vpc_proyecto.id
   ingress {
-    description = "Todo el tráfico"
+    description = "Todo el trafico"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
@@ -142,6 +149,14 @@ resource "aws_security_group" "gs_private" {
     cidr_blocks = ["${aws_eip.proxy_eip.private_ip}/32"]
   }
 
+  ingress {
+    description = "Monitorizacion"
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["${aws_eip.monitorizacion_eip.private_ip}/32"]
+  }
+  
   ingress {
     description = "MySQL/MariaDB"
     from_port   = 3306

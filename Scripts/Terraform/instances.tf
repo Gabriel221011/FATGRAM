@@ -45,7 +45,7 @@ resource "aws_instance" "ServerWeb2" {
   
 
   tags = {
-    Name = "Servidor Web"
+    Name = "Servidor Web 2"
   }
 }
 
