@@ -33,22 +33,6 @@
         group: monitorizacion
         mode: '0400'
 
-- name: Transferir clave a los servidores
-  hosts: servidores_web
-  become: yes
-  tasks:
-    - name: Copiar la clave a la carpeta de los usuarios de los servidores
-      copy:
-        src: /home/monitorizacion/.ssh/fatgram.pem
-        dest: /home/ubuntu/.ssh/fatgram.pem
-        owner: ubuntu
-        group: ubuntu
-        mode: '0400'
-
-- name: Preparación de los servidores y el proxy para la monitorización
-  hosts: monitorizacion
-  become: yes
-  tasks:
     - name: Actualizar repositorios (apt update)
       apt:
         update_cache: yes
@@ -69,14 +53,7 @@
         owner: monitorizacion
         group: monitorizacion
         mode: '0755'
-
-    - name: Crear carpeta para almacenar los scripts de Ansible
-      file:
-        path: /home/monitorizacion/scripts/ansible
-        state: directory
-        owner: monitorizacion
-        group: monitorizacion
-
+        
     - name: Clonar repositorio
       git:
         repo: 'https://github.com/Gabriel221011/FATGRAM'
@@ -90,27 +67,6 @@
         owner: monitorizacion
         group: monitorizacion
         mode: '0755'
-
-    - name: Copiar archivos de Ansible desde Github a la carpeta de scripts de monitorización
-      copy:
-        src: /home/monitorizacion/FATGRAM/Scripts/Ansible/
-        dest: /home/monitorizacion/scripts/ansible/
-        owner: monitorizacion
-        group: monitorizacion
-        mode: '0755'
-
-    - name: Copiar los archivos necesarios de la carpeta de Ansible a la carpeta de scripts de monitorización
-      copy:
-        src: /home/monitorizacion/FATGRAM/Scripts/Ansible/*
-        dest: /home/monitorizacion/scripts/ansible/
-        owner: monitorizacion
-        group: monitorizacion
-        mode: '0755'
-
-    - name: Ejecutar el script de Ansible para configurar el proxy
-      command: ansible-playbook /home/monitorizacion/scripts/ansible/playbook-proxy.yml
-      become: yes
-      become_user: monitorizacion
       
     - name: Borrar el repositorio clonado para liberar espacio
       file:

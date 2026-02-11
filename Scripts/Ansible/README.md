@@ -3,10 +3,10 @@ Este directorio contiene los scripts de Ansible para la automatización de prepa
 
 ## Requisitos para el correcto funcionamiento de los scripts
 - Disponer de la clave vockey de las instancias para que Ansible se pueda conectar
-- Copiar la clave a la instancia **monitorización** en la ruta /home/ubuntu/.ssh/fatgram.pem. **Para este script, es importante que el nombre de la clave sea fatgram.pem**
+- Copiar la clave a la instancia **Proxy-NAT** en la ruta /home/ubuntu/.ssh/fatgram.pem. **Para este script, es importante que el nombre de la clave sea fatgram.pem**
 - Modificar el inventario de hosts (hosts.ini) en función de las direcciones IP de las instancias
 - Modificar el archivo **ansible.cfg** para establecer la ruta de la clave y el inventario que se utilizará para configurar las instancias
-- Ejecutar el script inicial **(playbook-monitorizacion.yml)** desde una máquina Linux local (o máquina virtual en VMware o Virtualbox) para el correcto funcionamiento de Ansible
+- Ejecutar el script inicial **(playbook-proxy.yml)** desde una máquina Linux local (o máquina virtual en VMware o Virtualbox) para el correcto funcionamiento de Ansible. **Es imprescindible hacerlo en esta instancia ya que requiere que el proxy cree las rutas para convertirse en instancia NAT y poder acceder al resto de instancias que se encuentran en la subred privada.**
 
 **Es importante tener en cuenta que estos scripts se han de ejecutar en una máquina local en Linux para su correcto funcionamiento**
 
