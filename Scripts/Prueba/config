@@ -1,0 +1,21 @@
+Host proxy_nat
+  HostName 3.208.165.19
+  IdentityFile /home/pablo/.ssh/fatgram.pem
+  User ubuntu
+
+Host web1
+  HostName 10.0.128.173
+  IdentityFile /home/pablo/.ssh/fatgram.pem
+  User ubuntu
+  ProxyJump proxy_nat
+
+Host web2
+  HostName 10.0.128.200
+  IdentityFile /home/pablo/.ssh/fatgram.pem
+  User ubuntu
+  ProxyJump proxy_nat
+
+Host monitorizacion
+  HostName 54.81.14.244
+  IdentityFile /home/pablo/.ssh/fatgram.pem
+  User ubuntu

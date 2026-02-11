@@ -67,10 +67,10 @@
           - Reiniciar Nginx
 
     - name: Ejecutar el script de configuración de los servidores web
-      command: ansible-playbook -i /home/ubuntu/FATGRAM/Scripts/Ansible/hosts.ini /home/ubuntu/FATGRAM/Scripts/Ansible/playbook-servidores.yml
+      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Prueba/playbook-servidores.yml
     
     - name: Ejecutar el script de configuración de la monitorización
-      command: ansible-playbook -i /home/ubuntu/FATGRAM/Scripts/Ansible/hosts.ini /home/ubuntu/FATGRAM/Scripts/Ansible/playbook-monitorizacion.yml
+      command: ansible-playbook -i /home/ubuntu/FATGRAM/Scripts/Prueba/hosts.ini /home/ubuntu/FATGRAM/Scripts/Prueba/playbook-monitorizacion.yml
 
     - name: Borrar el repositorio clonado para liberar espacio
       file:
