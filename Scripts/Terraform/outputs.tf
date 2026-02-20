@@ -1,6 +1,6 @@
 output "ip_proxy_nat" {
   description = "IP Publica del Proxy NAT"
-  value       = "La dirección IP pública de la instancia Proxy es ${aws_instance.proxy.public_ip}"
+  value       = "La dirección IP pública de la instancia Proxy es ${aws_eip.proxy_eip.public_ip}"
 }
 output "ip_servidor_web_1" {
   description = "IP Privada del Servidor Web"
@@ -12,9 +12,9 @@ output "ip_servidor_web2" {
 }
 output "ip_monitorizacion" {
   description = "IP Publica del Servidor de Monitorización"
-  value       = "La dirección IP pública de la instancia del Servidor de Monitorización es ${aws_instance.monitorizacion.public_ip}"
+  value       = "La dirección IP pública de la instancia del Servidor de Monitorización es ${aws_eip.monitorizacion_eip.public_ip}"
 }
 output "endpoint_rds" {
   description = "Endpoint de la base de datos RDS"
-  value       = "El endpoint de la base de datos RDS es ${aws_db_instance.rds_instance.endpoint}"
+  value       = "El endpoint de la base de datos RDS es ${aws_db_instance.rds_db.endpoint}"
 }

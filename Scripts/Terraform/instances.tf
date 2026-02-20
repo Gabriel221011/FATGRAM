@@ -17,17 +17,17 @@ resource "aws_instance" "ServerWeb" {
   key_name      = var.key_type
   instance_type = var.instance_type
   root_block_device {
-    volume_size = 10              
+    volume_size = 15              
     volume_type = "gp2"           
     delete_on_termination = true  
   }
 
-  vpc_security_group_ids = [aws_security_group.gs_private.id]
+  vpc_security_group_ids = [aws_security_group.gs_private.id, aws_security_group.ec2_rds.id]
   subnet_id = aws_subnet.subnet_privada.id
   
 
   tags = {
-    Name = "Servidor Web"
+    Name = "Servidor Web 1"
   }
 }
 
@@ -36,11 +36,11 @@ resource "aws_instance" "ServerWeb2" {
   key_name      = var.key_type
   instance_type = var.instance_type
   root_block_device {
-    volume_size = 10              
+    volume_size = 15              
     volume_type = "gp2"           
     delete_on_termination = true  
   }
-  vpc_security_group_ids = [aws_security_group.gs_private.id]
+  vpc_security_group_ids = [aws_security_group.gs_private.id, aws_security_group.ec2_rds.id]
   subnet_id = aws_subnet.subnet_privada.id
   
 

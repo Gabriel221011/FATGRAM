@@ -175,29 +175,6 @@ resource "aws_security_group" "gs_private" {
     Name = "Grupo-Privado"
   }
 }
-resource "aws_security_group" "gs_rds" {
-  name        = "gs-rds"
-  description = "Grupo de seguridad para la base de datos RDS"
-  vpc_id      = aws_vpc.vpc_proyecto.id
-
-  ingress {
-    description = "MariaDB"
-    from_port   = 3306
-    to_port     = 3306
-    protocol    = "tcp"
-    cidr_blocks = ["10.0.128.0/24"]
-  }
-  egress {
-    description = "All outbound"
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  tags = {
-    Name = "Grupo-RDS"
-  }
-}
 # Creación de la ACL de red
 resource "aws_network_acl" "acl_nat" {
   vpc_id = aws_vpc.vpc_proyecto.id
