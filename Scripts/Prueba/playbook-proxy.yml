@@ -38,16 +38,14 @@
     - name: Configurar iptables
       shell: 
         sudo iptables -t nat -A POSTROUTING -o ens5 -j MASQUERADE
-      become: yes
  
     - name: "Guardar reglas de iptables para que se apliquen al reiniciar"
       shell: 
         iptables-save > /etc/iptables/rules.v4
-      become: yes
 
     - name: Habilitar el reenvío IPv4 al iniciar la instancia
       command: echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf  
-      become: yes
+
     ## Configuración del proxy inverso con Nginx
 
     - name: Clonar el respositorio de Fatgram
@@ -58,23 +56,35 @@
 
     - name: Copiar el archivo de configuración de Nginx para Fatgram
       copy:
-        src: /home/pablo/FATGRAM/Servidor Web/Proxy/
+        src: /home/ubuntu/FATGRAM/Servidor Web/Proxy/
         dest: /etc/nginx/
         owner: root
         group: root
         mode: '0644'
       notify:
           - Reiniciar Nginx
+          
+    - name: Enviar clave al servidor web 1
+      command: scp /home/ubuntu/.ssh/fatgram.pem Web1:/home/ubuntu/.ssh/fatgram.pem 
 
+    - name: Enviar configuración al servidor web 1
+      command: scp /home/ubuntu/.ssh/config Web1:/home/ubuntu/.ssh/config
+
+    - name: Enviar clave al servidor web 2
+      command: scp /home/ubuntu/.ssh/fatgram.pem Web2:/home/ubuntu/.ssh/fatgram.pem 
+
+    - name: Enviar configuración al servidor web 2
+      command: scp /home/ubuntu/.ssh/config Web2:/home/ubuntu/.ssh/config  
+  ## Eliminar en caso de que no funcione por connection timed out
     - name: Ejecutar el script de configuración de los servidores web
-      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Prueba/playbook-servidores.yml
+      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Pueba/Servidores/playbook-servidores.yml
     
     - name: Ejecutar el script de configuración de la monitorización
-      command: ansible-playbook -i /home/ubuntu/FATGRAM/Scripts/Prueba/hosts.ini /home/ubuntu/FATGRAM/Scripts/Prueba/playbook-monitorizacion.yml
+      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Prueba/Monitorizacion/playbook-monitorizacion.yml
 
     - name: Borrar el repositorio clonado para liberar espacio
       file:
-        src: /home/pablo/FATGRAM
+        src: /home/ubuntu/FATGRAM
         state: absent
 
     ## Handlers para reiniciar el servicio de Nginx cuando se cambie su configuración
