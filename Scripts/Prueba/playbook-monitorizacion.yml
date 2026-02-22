@@ -26,13 +26,14 @@
         mode: '0700'
 
     - name: Mover la clave al nuevo usuario
-      move:
+      copy:
         src: /home/ubuntu/.ssh/fatgram.pem
         dest: /home/monitorizacion/.ssh/fatgram.pem
         owner: monitorizacion
         group: monitorizacion
+        remote_src: yes
         mode: '0400'
-
+        
     - name: Actualizar repositorios (apt update)
       apt:
         update_cache: yes
