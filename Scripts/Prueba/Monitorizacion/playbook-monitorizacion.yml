@@ -62,7 +62,7 @@
 
     - name: Copiar scripts desde Github a la carpeta de scripts de monitorización
       copy:
-        src: /home/monitorizacion/FATGRAM/Scripts/Monitorizacion/monitorizacion.py
+        src: /home/monitorizacion/FATGRAM/Scripts/Monitorizacion/*.py
         dest: /home/monitorizacion/scripts/
         owner: monitorizacion
         group: monitorizacion

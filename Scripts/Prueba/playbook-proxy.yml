@@ -76,11 +76,11 @@
     - name: Enviar configuración al servidor web 2
       command: scp /home/ubuntu/.ssh/config Web2:/home/ubuntu/.ssh/config  
   ## Eliminar en caso de que no funcione por connection timed out
-    - name: Ejecutar el script de configuración de los servidores web
-      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Pueba/Servidores/playbook-servidores.yml
-    
     - name: Ejecutar el script de configuración de la monitorización
       command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Prueba/Monitorizacion/playbook-monitorizacion.yml
+
+    - name: Ejecutar el script de configuración de los servidores web
+      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Prueba/Servidores/playbook-servidores.yml
 
     - name: Borrar el repositorio clonado para liberar espacio
       file:
