@@ -65,11 +65,6 @@
       notify:
           - Reiniciar Nginx
 
-    - name: Borrar el repositorio clonado para liberar espacio
-      file:
-        path: /home/ubuntu/FATGRAM
-        state: absent
-
     ## Handlers para reiniciar el servicio de Nginx cuando se cambie su configuración
   handlers:
     - name: Reiniciar Nginx
