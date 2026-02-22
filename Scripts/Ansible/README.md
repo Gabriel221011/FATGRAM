@@ -28,4 +28,4 @@ Este directorio contiene los scripts de Ansible para la automatización de prepa
 2. Entrar al directorio **/home/ubuntu/server_config** que ha dejado el playbook de la instalación del proxy.
 3. Modificar ansible.cfg y hosts.ini. **Las instrucciones vienen dadas dentro de los archivos**
 4. Modificar dentro del playbook **3-playbook-servidores** el endpoint de la base de datos del RDS para la creación de usuarios y bases de datos. Quedan comentadas las indicaciones dentro del playbook.
-5. Ejecutar `3-playbook-servidores` para la configuración básica de los servidores web.
+5. Ejecutar `ansible-playbook 3-playbook-servidores` para la configuración básica de los servidores web.
