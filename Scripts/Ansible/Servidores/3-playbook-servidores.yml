@@ -1,0 +1,130 @@
+---
+- name: Configuración de los servidores web
+  hosts: servidores_web
+  become: yes
+  tasks:
+    - name: Actualizar repositorios
+      apt:
+        update_cache: yes
+    
+    - name: Instalar MariaDB, nginx, php y pymysql
+      apt:
+        name: 
+          - mariadb-server
+          - nginx-full
+          - php
+          - php-fpm
+          - php-mysql
+          - python3-pymysql
+        state: present
+
+
+    - name: Borrar el index.html por defecto de Nginx
+      file:
+        path: /var/www/html/index.nginx-debian.html
+        state: absent
+
+    - name: Borrar default.conf por defecto de Nginx
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
+
+    - name: Deshabilitar el servicio de Apache2 si está instalado
+      service:
+        name: apache2
+        state: stopped
+        enabled: no
+
+    ## Clonación del repositorio de Fatgram y configuración de los servidores web
+
+    - name: Clonación del repositorio de Fatgram
+      git:
+        repo: 'https://github.com/Gabriel221011/FATGRAM.git'
+        dest: /home/ubuntu/FATGRAM
+        version: main
+
+    - name: Copiar del repositorio la carpeta de Wordpress
+      copy:
+        src: /home/ubuntu/FATGRAM/Servidor Web/Wordpress/
+        dest: /var/www/html/
+        owner: www-data
+        group: www-data
+        mode: '0755'
+        remote_src: yes
+
+    ## Copia de la configuración de Nginx para los servidores web
+
+    - name: Copiar la configuración de Nginx para los servidores web
+      copy:
+        src: /home/ubuntu/FATGRAM/Servidor Web/Instancias Web/sites-enabled/wordpress
+        dest: /etc/nginx/sites-available
+        owner: root
+        group: root
+        remote_src: yes
+
+    - name: Link simbólico para habilitar la configuración de Nginx
+      file:
+        src: /etc/nginx/sites-available/wordpress
+        dest: /etc/nginx/sites-enabled/wordpress
+        state: link
+        force: yes
+
+    - name: Reiniciar el servicio de Nginx para aplicar los cambios
+      service:
+        name: nginx
+        state: restarted
+
+    ## Instalación de phpmyadmin
+    - name: Copiar el directorio de phpmyadmin desde el repositorio clonado
+      copy:
+        src: /home/ubuntu/FATGRAM/Servidor Web/phpmyadmin/
+        dest: /var/www/html/phpmyadmin/
+        owner: www-data
+        group: www-data
+        mode: '0755'
+        remote_src: yes
+
+    - name: Crear base de datos de Wordpress en MariaDB
+      mysql_db:
+        login_host: fatgram.cpsv6unscrxx.us-east-1.rds.amazonaws.com ## Modificar en función del endpoint de la base de datos
+        login_user: root ## Modificar en función del usuario administrador de la base de datos
+        login_password: usuario2 ## Modificar en función de la contraseña del usuario administrador de la base
+        name: wordpress
+        state: present
+
+    - name: Crear el usuario de Wordpress en MariaDB con host remoto
+      community.mysql.mysql_user:
+        login_host: fatgram.cpsv6unscrxx.us-east-1.rds.amazonaws.com ## Modificar en función del endpoint de la base de datos
+        login_user: root ## Modificar en función del usuario administrador de la base de datos
+        login_password: usuario2 ## Modificar en función de la contraseña del usuario administrador de la base
+        name: wordpress
+        password: wordpress
+        host: '%'
+        priv: 'wordpress.*:ALL'
+        state: present
+
+    - name: Crear la base de datos de phpmyadmin en MariaDB
+      mysql_db:
+        login_host: fatgram.cpsv6unscrxx.us-east-1.rds.amazonaws.com ## Modificar en función del endpoint de la base de datos
+        login_user: root ## Modificar en función del usuario administrador de la base de datos
+        login_password: usuario2 ## Modificar en función de la contraseña del usuario administrador de la base
+        name: phpmyadmin
+        state: present
+
+    - name: Crear el usuario de phpmyadmin en MariaDB con host remoto
+      community.mysql.mysql_user:
+        login_host: fatgram.cpsv6unscrxx.us-east-1.rds.amazonaws.com ## Modificar en función del endpoint de la base de datos
+        login_user: root ## Modificar en función del usuario administrador de la base de datos
+        login_password: usuario2 ## Modificar en función de la contraseña del usuario administrador de la base
+        name: phpmyadmin
+        password: phpmyadmin
+        host: '%'
+        priv: 'phpmyadmin.*:ALL'
+        state: present
+    
+    ## Borrado del respositorio clonado para liberar espacio
+
+    - name: Borrar el repositorio clonado para liberar espacio
+      file:
+        path: /home/ubuntu/FATGRAM
+        state: absent

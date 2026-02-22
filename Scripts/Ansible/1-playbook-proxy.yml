@@ -11,12 +11,11 @@
       apt:
         name:
           - git
-          - nginx
+          - nginx-full
           - php
           - ansible
           - iptables-persistent
-          - python3
-          - python3-pip
+          - certbot
         state: present
 
   ## Configuración de la instancia NAT
@@ -61,30 +60,60 @@
         owner: root
         group: root
         mode: '0644'
-      notify:
-          - Reiniciar Nginx
+        remote_src: yes
     
-    - name: Enviar clave al servidor web 1
-      command: scp /home/ubuntu/.ssh/fatgram.pem Web1:/home/ubuntu/.ssh/fatgram.pem 
-
-    - name: Enviar configuración al servidor web 1
-      command: scp /home/ubuntu/.ssh/config Web1:/home/ubuntu/.ssh/config
-
-    - name: Enviar clave al servidor web 2
-      command: scp /home/ubuntu/.ssh/fatgram.pem Web2:/home/ubuntu/.ssh/fatgram.pem 
-
-    - name: Enviar configuración al servidor web 2
-      command: scp /home/ubuntu/.ssh/config Web2:/home/ubuntu/.ssh/config  
-
-    - name: Ejecutar el script de configuración de los servidores web
-      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Ansible/Servidores/playbook-servidores.yml
-    
-    - name: Ejecutar el script de configuración de la monitorización
-      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Ansible/Monitorizacion/playbook-monitorizacion.yml
-
-    - name: Borrar el repositorio clonado para liberar espacio
+    - name: Borrar el index.html por defecto de Nginx
       file:
-        src: /home/ubuntu/FATGRAM
+        path: /etc/nginx/sites-available/default
+        state: absent
+
+    - name: Habilitar el sitio de Nginx para Fatgram
+      file:
+        src: /etc/nginx/sites-available/proxy.conf
+        dest: /etc/nginx/sites-enabled/proxy.conf
+        state: link
+        force: yes
+    
+    - name: Copia de los archivos de letsencrypt para HTTPS
+      copy:
+        src: /home/ubuntu/FATGRAM/Servidor Web/letsencrypt/
+        dest: /etc/letsencrypt/
+        owner: root
+        group: root
+        mode: '0644'
+        remote_src: yes
+
+    - name: Deshabilitar apache2 para evitar conflictos con Nginx
+      service:
+        name: apache2
+        state: stopped
+        enabled: no
+
+    - name: Reiniciar Nginx para aplicar los cambios
+      service:
+        name: nginx
+        state: restarted
+
+    - name: Directorio para el script de configuración de los servidores
+      file:
+        path: /home/ubuntu/server_config
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'
+
+    - name: Copiar Ansible de los servidores
+      copy:
+        src: /home/ubuntu/FATGRAM/Scripts/Ansible/Servidores/
+        dest: /home/ubuntu/server_config/
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'
+        remote_src: yes
+
+    - name: Borrado del repositorio clonado para liberar espacio
+      file:
+        path: /home/ubuntu/FATGRAM
         state: absent
 
     ## Handlers para reiniciar el servicio de Nginx cuando se cambie su configuración
