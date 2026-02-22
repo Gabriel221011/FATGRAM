@@ -38,11 +38,10 @@
       apt:
         update_cache: yes
 
-    - name: Instalar Git, Ansible y Python3
+    - name: Instalar Git y Python3
       apt:
         name:
           - git
-          - ansible
           - python3
           - python3-pip
         state: present
@@ -63,10 +62,11 @@
 
     - name: Copiar scripts desde Github a la carpeta de scripts de monitorización
       copy:
-        src: /home/monitorizacion/FATGRAM/Scripts/Monitorizacion/*.py
+        src: /home/monitorizacion/FATGRAM/Scripts/Monitorizacion
         dest: /home/monitorizacion/scripts/
         owner: monitorizacion
         group: monitorizacion
+        remote_src: yes
         mode: '0755'
       
     - name: Borrar el repositorio clonado para liberar espacio

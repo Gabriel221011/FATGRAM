@@ -65,14 +65,9 @@
       notify:
           - Reiniciar Nginx
 
-
-    - name: Ejecutar el script de configuración de la monitorización
-      command: ansible-playbook /home/ubuntu/FATGRAM/Scripts/Prueba/playbook-monitorizacion.yml
-
-
     - name: Borrar el repositorio clonado para liberar espacio
       file:
-        src: /home/ubuntu/FATGRAM
+        path: /home/ubuntu/FATGRAM
         state: absent
 
     ## Handlers para reiniciar el servicio de Nginx cuando se cambie su configuración
