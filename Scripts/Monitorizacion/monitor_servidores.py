@@ -8,6 +8,10 @@ Utiliza alias definidos en ~/.ssh/config (ej: web, web2)
 Requiere:
 - Conexión sin contraseña (clave pública configurada)
 - nc, curl, free, df, awk, uptime instalados en los servidores
+
+MODOS:
+- Manual: python monitor_servidores.py
+- Automático (cron): python monitor_servidores.py auto
 """
 
 import subprocess
@@ -201,6 +205,25 @@ def monitor_completo(nombre, host_alias):
     print("═" * 70 + "\n")
 
 
+# ================= MODO AUTOMÁTICO (CRON) =================
+
+def modo_automatico():
+    """Ejecuta monitorización de todos los hosts sin interacción"""
+    print("\n=== MODO AUTOMÁTICO (CRON) ===\n")
+    log("Modo automático iniciado")
+
+    for nombre, host in HOSTS.items():
+        try:
+            monitor_completo(nombre, host)
+        except Exception as e:
+            error = f"[{nombre}] ERROR en monitorización: {e}"
+            print(error)
+            log(error)
+
+    print("\n=== FIN MODO AUTOMÁTICO ===\n")
+    log("Modo automático finalizado")
+
+
 # ================= MENÚS =================
 
 def menu_principal():
@@ -269,7 +292,7 @@ def modo_manual():
                 else:
                     print("Opción no válida")
 
-                print()  # línea en blanco para separar
+                print()
 
         elif opcion == "2":
             print("\nMonitorizando todas las máquinas...\n")
@@ -290,8 +313,14 @@ def modo_manual():
 if __name__ == "__main__":
     print("Iniciando monitor de servidores...")
     log("Script iniciado")
+
     try:
-        modo_manual()
+        # 👉 modo cron
+        if len(sys.argv) > 1 and sys.argv[1] == "auto":
+            modo_automatico()
+        else:
+            modo_manual()
+
     except KeyboardInterrupt:
         print("\n\nInterrumpido por el usuario.")
     except Exception as e:
