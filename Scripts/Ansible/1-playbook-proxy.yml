@@ -66,7 +66,10 @@
       file:
         path: /etc/nginx/sites-available/default
         state: absent
-
+    - name: Asegurar que el sitio default no existe en sites-enabled
+      file:
+        path: /etc/nginx/sites-enabled/default
+        state: absent
     - name: Habilitar el sitio de Nginx para Fatgram
       file:
         src: /etc/nginx/sites-available/proxy.conf
